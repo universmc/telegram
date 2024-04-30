@@ -7,17 +7,44 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
 const Pibot = `@PyArcade_bot`
 
-const user = 
+const input = "telegram-user"
+
+
+const cmd = {
+    'help': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help'
+    },
+    'dev': {
+        description: 'devOps Fonction',
+        usage: '/dev'
+    },
+    'test': {
+        description: 'Test de fonctionnalité.',
+        usage: '/test'
+    },
+    'brainstorm': {
+        description: 'Brainstorming pour générer des idées créatives.',
+        usage: '/brainstorm [sujet]'
+    },
+    'brainstorm': {
+        description: 'Brainstorming pour générer des idées créatives.',
+        usage: '/brainstorm'
+    },
+    // Ajoutez d'autres commandes ici sous la même forme
+};
+
 
 bot.on('message', async (ctx) => {
     const message = ctx.message.text.trim().toLowerCase();
 
     // Détecte si le message commence avec la commande "/brainstorm"
-    if (message.startsWith('/brainstorm')) {
+    if (message.startsWith('/')) {
         try {
             const chatCompletion = await groq.chat.completions.create({
                 messages: [
-                    { role: 'system',content: `${universmc}+${Pibot}`},
+                    { role: 'system',content: `${universmc}+${Pibot}+${cmd}`},
+                    { role: 'system',name:'@botFater',content: `if(cmd){RUN[/cmd]}`},
                     {
                         role: 'system',
                         name: 'Telegraf',

@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
-const Pibot = `@PyArcade_bot`
+const Pibot = ` @PitBotRetro_bot:`
 const input = "Telegram(user)"
 
 
