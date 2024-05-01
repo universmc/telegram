@@ -19,7 +19,7 @@ bot.on('message', async (ctx) => {
                 messages: [
                     {
                         role: 'system',
-                        content: 'Initialisation de la session de brainstorming sur https://github.com/brainstroming.git',
+                        content: 'Initialisation de la session de brainstorming sur https://github.com/universmc/Telegram.git ',
                     },
                     {
                         role: 'assistant',
