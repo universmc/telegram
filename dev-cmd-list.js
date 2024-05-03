@@ -10,31 +10,7 @@ const Pibot2 = `@PitBotRetro_bot`
 
 const input = "telegram-user"
 
-const regex = `{role:system,content:'prompt(!message)'}.r\//`;
-const str = `{role:system,assistant:'prompt(.response)'}.r`;
 
-// Test the string against the regex
-const match = `${regex}+${str}`;
-
-const promptTelegraf = `prompt-telegraf`;
-
-const Telegram_chatCompletion = `insert{role:'system',name:'user-telegram',content:if('/')bot.commad.r}`
-
-// Log the result
-bot.command('start', async ctx => {
-    try {
-        const result = await groq.chat.completions.create(`
-            {
-              role: system,
-              content: "Welcome to my bot! Use /help to see available commands."
-            }
-          `);
-
-        await ctx.replyWithHTML(result.content);
-    } catch (e) {
-        console.error(e);
-    }
-});
 
 
 bot.on('message', async (ctx) => {
@@ -49,7 +25,7 @@ bot.on('message', async (ctx) => {
                     {
                         role: 'system',
                         name: 'Telegraf',
-                        content: 'Initialisation de notre code source sur sur https://github.com/universmc/telegram.git',
+                        content: 'Initialisation de notre code source sur sur https://github.com/universmc/Telegram.git',
                     },
                     {
                         role: 'assistant',
