@@ -2,49 +2,130 @@ const fs = require("fs");
 const Groq = require("groq-sdk");
 const groq = new Groq();
 
+const Telegraf = require("./Telegraf.js");
+
 const bootcss = "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>";
 const bootJs = "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>";
 const bootstrap = bootcss+bootJs;
 
+const github = "https://github.com/universmc/Telegram.git";
+const Telegram = `telegram.git -version`
+
 const importDicoEmojis = "file://src/json/dicoEmojis.js"
 
-const logo = "Matrix - Tiktok";
-const stylus = "darkTheme";
+const logo = "Matrix - Telegraf";
+const stylus = "telegram";
 
 const BsResponse = "`responseHtml`{devOps.html:5}";
 const header = "bootstrap navBar+carrousel"
-const mainContent = "bootstrap devOps sass video TikToken"
+const mainContent = "bootstrap devOps sass video telegraf"
 const footer = "asign cc by univers-mc.cloud"
 
 const responseHtml = `${header}"+${mainContent}+${footer}`;
 
-const context = "const 68";
-const post = "tiktok";
-const job = "Video_maker"
+const context = "/dev Telegram";
+const post = "telegraf";
+const job = "role:assistant";
 const work = context+post+job;
-const Mission = "intégrer la plus grande communauté #IA des transformations numériques dans ia.univers-mc.cloud un secteur de mobilités et pour devenir un #video_Maker."
+
+const Mission = "intégrer la plus grande communauté #IA des transformations numériques sur le dchub (directConnect HUB) un secteur de mobilités et Et l'avenir de l'intelligence artificielle et de la machine Learning dans le Cloud Computing sur Telegram"
+
+
+const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
+const Pibot = `@PyArcade_bot`
+const Pibot2 = `@PitBotRetro_bot`
+
+
+const regex = `{role:system,content:'prompt(!message)'}.r\//`;
+const str = `{role:system,assistant:'prompt(.response)'}.r`;
+
+// Test the string against the regex
+const match = `regex.${regex}+${str}`;
+const promptTelegraf = `prompt-telegraf`;
+
+const dchub = "t.me/PyArcade_bot/dchub";
+const RPG = "t.me/PyArcade_bot?game=RPG"
+const universUmc = "https://t.me/universmc6"
+
+const PiGame = `${RPG}`
+
+const umc = `${dchub},${universUmc},${github},${Telegram},${universmc}`;
 
 const workMission = `{
-    "title": "# Projet TikTok – Drones AR avec Pi",
+    "title": "# Projet Telegram – avec Pibot",
     "subtitles": [
       {
+        "sectionID": "1",
         "sectionTitle": "Présentation",
-        "content": "Ce projet consiste à créer une série de vidéos TikTok de 68 secondes chacune, présentant un personnage utilisant des lunettes AR et un drone virtuel. Le script comporte cinq scènes et inclut des fichiers multimédias associés."
+        "content": "Ce projet consiste à créer une série de vidéos TikTok de 68 secondes chacune, présentant un personnage utilisant des lunettes AR et un drone virtuel. Le script comporte cinq scènes et inclut des fichiers multimédias associés.",
+        "usage": "[run]('/').cmd start",
+        "command": "/start",
+        "description": "/start",
+        "data": "rdfLIB"
+        "docs": "Présentation",
+        "build": "Présentation",
+        "src": "Présentation",
+        "timeStamps": "",
+        "hashCode": ""
       },
-      {
+      { 
+        "sectionID": "2",
         "sectionTitle": "Utilisation de GitHub",
-        "content": "Nous utilisons GitHub pour gérer notre projet en suivant un système de branches de version pour chaque version de la vidéo. Ceci simplifie la collaboration et permet d'apporter des modifications sur plusieurs branches de la vidéo."
+        "content": "/help git branch /docs",
+        "usage": "/start",
+        "command": "/start",
+        "description": "/start",
+        "data": "rdfLIB"
+        "docs": "Présentation",
+        "build": "Présentation",
+        "src": "Présentation",
+        "timeStamps": "",
+        "hashCode": ""
       },
       {
-        "sectionTitle": "Script des vidéos",
+        "sectionID": "3",
+        "sectionTitle": "Script pour la generation de code source .endpoint++",
         "content": "Le script du projet est accessible depuis le fichier 'script.json'. Il présente une description détaillée de chaque scène et renvoie vers les fichiers multimédias correspondants."
+        "usage": "/start",
+        "command": "/start",
+        "description": "/start",
+        "data": "rdfLIB"
+        "docs": "Présentation",
+        "build": "Présentation",
+        "src": "Présentation",
+        "timeStamps": "",
+        "hashCode": ""
       },
       {
+        "sectionID": "4",
+        "sectionTitle": "Script des vidéos",
+        "content": "Le script du projet est accessible depuis le fichier 'script.json'. Il présente une description détaillée de chaque scène et renvoie vers les fichiers multimédias correspondants.",
+        "usage": "/start",
+        "command": "/start",
+        "description": "/start",
+        "data": "rdfLIB",
+        "docs": "Présentation",
+        "build": "Présentation",
+        "src": "Présentation",
+        "timeStamps": "",
+        "hashCode": ""
+      },
+      { 
+        "sectionID": "3",",
         "sectionTitle": "Fichiers multimédias",
-        "content": "Chaque scène dispose de fichiers multimédias hébergés sur le référentiel GitHub, composés de fichiers audio (MP3), vidéo (MP4) et texte (TXT). Les noms et liens de ces fichiers peuvent être trouvés dans le fichier 'script.json'."
+        "content": "Chaque scène dispose de fichiers multimédias hébergés sur le référentiel GitHub, composés de fichiers audio (MP3), vidéo (MP4) et texte (TXT). Les noms et liens de ces fichiers peuvent être trouvés dans le fichier 'script.json'.",
+        "usage": "/start",
+        "command": "/start",
+        "description": "/start",
+        "data": "rdfLIB",
+        "docs": "Présentation",
+        "build": "Présentation",
+        "src": "Présentation",
+        "timeStamps": "",
+        "hashCode": ""
       }
     ],
-    "scenes": [
+    "video_exemple": [
         {
             "id": "scene1",
             "run": true,
@@ -109,15 +190,16 @@ async function main() {
             // Set an optional system message. This sets the behavior of the
             // assistant and can be used to provide specific instructions for
             {role: "assistant",name:"[📔.codex]", content:"[📔.codex]/phase[01]:[RUN]:[brainstorming(session{1}.timestamp+)]"},
-            {role: "system", content: bootstrap },
-            {role: "system", content: BsResponse },
-            {role: "system", content: stylus },
-            {role: "system", content: logo },
-            {role: "system", content: work },
-            {role: "system", content: importDicoEmojis },
-            {role: "system", content: Mission },
-            {role: "system", content: workMission },
-
+            {role: "system", content: `${bootstrap}` },
+            {role: "system", content: `${BsResponse}` },
+            {role: "system", content: `${stylus} `},
+            {role: "system", content: `${logo}` },
+            {role: "system", content: `${work}` },
+            {role: "system", content: `${importDicoEmojis}` },
+            {role: "system", content: `${umc}` },
+            {role: "system", content: `${Pibot}` },
+            {role: "system", content: `${Mission}` },
+            
             
             // Set a user message for the assistant to respond to.
             {role: "assistant",name:"[📔.codex]", content:"[📔.codex]/phase[01]:[END]:[brainstorming(session{1}.timestamp)++]"},
@@ -133,16 +215,16 @@ async function main() {
               "content": "[👨🏽‍💻.Mike]:devops)"
             },
             {role: "system",name:"[📔.codex]", content:`${responseHtml}`},
-            {role: "assistant",name:"✨_pi",content:"groq init TiToken_index.html"},
+            {role: "assistant",name:"✨_pi",content:"groq init Pibot"},
                 // how it should behave throughout the conversation.
     
                 {
                     role: "user",
-                    content: "Génère le code HTML de la page TiToken_index.html dans le [Context] de la 'Mission' de création de video pour `tiktok' avec des `importDicoEmojis .ia`"
+                    content: "Génère le code HTML de la page index.html dans le [Context] de la 'Mission' de création de video pour dchub `"
                 },
                 {
                     role: "assistant",
-                    content: "Voici le code HTML d'une page TiToken_index.html avec bootstrap:"
+                    content: "Voici le code HTML d'une page de Présentation de la `${Mission}` sur ${universmc} au format HTML avec ${bootstrap}"
                 },
         ],
         // The language model which will generate the completion.
@@ -170,7 +252,7 @@ async function main() {
     }).then((chatCompletion)=>{
         // Print the completion returned by the LLM.
         const htmlContent = chatCompletion.choices[0]?.message?.content;
-        const outputFilePath = "DigitalMobility_" + new Date().toISOString().replace(/[-:TZ]/g, "") + ".html";
+        const outputFilePath = "doc-Telegraf_" + new Date().toISOString().replace(/[-:TZ]/g, "") + ".html";
         fs.writeFileSync(outputFilePath, htmlContent);
         console.log("Code HTML généré et enregistré dans " + outputFilePath);
     });

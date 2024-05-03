@@ -12,16 +12,6 @@ const Pibot = ` @PitBotRetro_bot:`
 const input = "Telegram(user)"
 
 
-// Répondre à chaque message envoyé au bot
-bot.on('message', async (ctx) => {
-    // Il est important d'envoyer la réponse de manière asynchrone
-    try {
-        await ctx.reply(`Bienvenue dans notre salon dédié à l'apprentissage automatique et à l'intelligence artificielle avec PiBot!`);
-    } catch (error) {
-        console.log('Error sending message:', error);
-    }
-});
-
 // Endpoint pour utiliser Groq avec un message type
 app.get('/groq', async (req, res) => {
     try {

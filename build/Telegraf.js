@@ -13,10 +13,10 @@ const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
 const Pibot = `@PyArcade_bot`
 const Pibot2 = `@PitBotRetro_bot`
 
-const docs = "https://telegraf.js.org/#/"
+const input = "tele"
 
-const regex = `{role:'system',content:'prompt(!message)'}.r`;
-const str = `{role:'assistant,content:'prompt(.response)'}.r`;
+const regex = `{role:system,content:'prompt(!message)'}.r\//`;
+const str = `{role:system,assistant:'prompt(.response)'}.r`;
 
 // Test the string against the regex
 const match = `${regex}+${str}`;
@@ -24,22 +24,6 @@ const match = `${regex}+${str}`;
 const promptTelegraf = `prompt-telegraf`;
 
 const Telegram_chatCompletion = `insert{role:'system',name:'user-telegram',content:if('/')bot.commad.r}`
-
-// Log the result
-bot.command('start', async ctx => {
-    try {
-        const result = await groq.chat.completions.create(`
-            {
-              role: system,
-              content: "Welcome to my bot! Use /help to see available commands."
-            }
-          `);
-
-        await ctx.replyWithHTML(result.content);
-    } catch (e) {
-        console.error(e);
-    }
-});
 
 
 bot.on('message', async (ctx) => {
@@ -50,7 +34,7 @@ bot.on('message', async (ctx) => {
         try {
             const chatCompletion = await groq.chat.completions.create({
                 messages: [
-                    { role: 'system',content: `${universmc}+${Pibot}+${bot}+${promptTelegraf}+${docs}`},
+                    { role: 'system',content: `${universmc}+${Pibot}+${bot}+${promptTelegraf}`},
                     { role: 'system',name:'@botFater',content: `if('/'){[meta.completion]}`},
                     {
                         role: 'system',

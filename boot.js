@@ -17,7 +17,7 @@ const Telegram = `${github}+${widgets}+${universmc}+${Pibot}`
 
 const bootstrapCSS = "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>";
 const header = `<header><nav><div id='navBar'></div></nav></header>`
-const mainContent = `<main><div id='telegram'><section class='Telegram'><article><h3>Telegram-widgets</h3><figure><div id='bootstap card'></div></figure></article></section></main>`
+const mainContent = `<main><div id='telegram'><section class='Telegram'><article><h3>Telegram-widgets</h3><figure><div id='bootstap card'>card1</div><figure><div id='bootstap card'>card2</div><figure><div id='bootstap card'>card3</div></figure></article></section><section class='Telegraf'><article><h3>Telegram-widgets</h3><figure><div id='bootstap'>Intro BotNet</div></figure></article></section><section class='BotNet'><article class='groq-sdk'><h3>Telegraf+groq-sdk</h3><figure><div id='bootstap'>connectTelegram - dchub-app</div></figure></article></section></main>`
 const footer = `<footer><div id='road_map></div></div>cc by univers-mc</div></footer>`
 const bootstrapJS = "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>";
 
@@ -36,7 +36,7 @@ async function main() {
             // how it should behave throughout the conversation.
             {
                 role: "assistant",
-                content: "/dev code source HTML d'une page d'index complete pour le develloppement widgets Telegram avec bootstrap:"
+                content: "/dev code source HTML d'une page d'index.html complete pour le develloppement widgets Telegram avec bootstrap:"
             },
             
             {role: "assistant", content: `${HTMLresponse}+${widgets}+${Telegram}` },

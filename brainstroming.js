@@ -6,50 +6,22 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 
 const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
 const Pibot = `@PyArcade_bot`
-const Pibot2 = `@PitBotRetro_bot`
 
-const input = "telegram-user"
-
-const regex = `{role:system,content:'prompt(!message)'}.r\//`;
-const str = `{role:system,assistant:'prompt(.response)'}.r`;
-
-// Test the string against the regex
-const match = `${regex}+${str}`;
-
-const promptTelegraf = `prompt-telegraf`;
-
-const Telegram_chatCompletion = `insert{role:'system',name:'user-telegram',content:if('/')bot.commad.r}`
-
-// Log the result
-bot.command('start', async ctx => {
-    try {
-        const result = await groq.chat.completions.create(`
-            {
-              role: system,
-              content: "Welcome to my bot! Use /help to see available commands."
-            }
-          `);
-
-        await ctx.replyWithHTML(result.content);
-    } catch (e) {
-        console.error(e);
-    }
-});
-
+const input = "telegram-user";
 
 bot.on('message', async (ctx) => {
     const message = ctx.message.text.trim().toLowerCase();
 
     // Détecte si le message commence avec la commande "/brainstorm"
-    if (message.startsWith('/')) {
+    if (message.startsWith('/brainstorm')) {
         try {
             const chatCompletion = await groq.chat.completions.create({
                 messages: [
-                    { role: 'system',content: `${universmc}+${Pibot}+${bot}+${promptTelegraf}`},
+                    { role: 'system',content: `${universmc}+${Pibot}`},
                     {
                         role: 'system',
                         name: 'Telegraf',
-                        content: 'Initialisation de notre code source sur sur https://github.com/universmc/telegram.git',
+                        content: 'Initialisation de la session de brainstorming sur https://github.com/brainstroming.git',
                     },
                     {
                         role: 'assistant',
@@ -60,7 +32,6 @@ bot.on('message', async (ctx) => {
                         role: 'user',
                         content: input,
                     },
-                      
                 ],
                 model: 'mixtral-8x7b-32768',
             });
