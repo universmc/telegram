@@ -1,6 +1,9 @@
 const { Telegraf } = require('telegraf');
 const Groq = require('groq-sdk');
 
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+
+const serveur = "url(https://univers-mc.cloud/Telegram/srv/webhook.js)"
 
 const menu = [
     start = "Start serveur",
@@ -9,47 +12,64 @@ const menu = [
     brainstroming = "Braintroming Session",
     pitsat = "Completion Chat",
     test = "Completion Chat",
-    images = "Completion images",
+    text = "Completion script",
     audio = "Completion audio",
+    images = "Completion images",
     video = "Completion video",
-    image = "Completion script",
     help = "Documentation github CoPilote",
     exit = "Quité le menu"
 ]
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-const bot = new Telegraf(process.env.BOT_TOKEN);
-
-const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
-const Pibot = `@PyArcade_bot`
-const Pibot2 = `@PitBotRetro_bot`
-
-
-const regex = `{role:system,content:'prompt(!message)'}.r\//`;
-const str = `{role:system,assistant:'prompt(.response)'}.r`;
-
-// Test the string against the regex
-const match = `regex.${regex}+${str}`;
-const promptTelegraf = `prompt-telegraf`;
-
-const Telegram_chatCompletion = `insert_{role:'user',name:'user-telegram',content:'prompt-telegraf'}`
-
-// Log the result
-
 const cmd = {
+    'start': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/srv/webhook,js'
+    },
+    'dev': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
+    'demo': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
+    'brainstorming': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: './help.js'
+    },
+    'pisat': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
+    'test': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
+    'text': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
+    'audio': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
+    'image': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
+    'video': {
+        description: 'Affiche la liste des commandes disponibles.',
+        usage: '/help{match}'
+    },
     'help': {
         description: 'Affiche la liste des commandes disponibles.',
         usage: '/help{match}'
     },
-    'dev': {
-        description: 'devOps console.log(match); // true or false',
-        usage: '/dev{match}'
-    },
-    'test': {
+    'help': {
         description: 'Test de fonctionnalité.',
         usage: '/test{match}'
     },
-    'brainstorm': {
+    'exit': {
         description: 'Brainstorming pour générer des idées créatives.',
         usage: '/brainstorm{match}'
     },
@@ -57,31 +77,53 @@ const cmd = {
 };
 
 
+
+
+
+const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
+const Pibot = `@PyArcade_bot`
+const PibotRetroArcade = `@PitBotRetro_bot`
+
+const input = "telegram-user"
+
+const regex = `{role:system,content:'prompt(command[messages])'}.r\//`;
+const str = `{role:system,assistant:'prompt(.groq-sdk[response])'}.r`;
+
+// Test the string against the regex
+const match = `${regex}+${str}`;
+
+const promptTelegraf = `prompt-telegraf`;
+
+bot.start((ctx) => {
+    ctx.reply('Welcome to Pibot!');
+  });
+
+  
 bot.on('message', async (ctx) => {
     const message = ctx.message.text.trim().toLowerCase();
 
-    // Détecte si le message commence avec la commande "/brainstorm"
+    // Détecte si le message commence avec la commande "/"
     if (message.startsWith('/')) {
         try {
             const chatCompletion = await groq.chat.completions.create({
                 messages: [
-                    { role: 'system',content: `${universmc}+${Pibot}+${cmd}`},
-                    { role: 'system',name:'@botFater',content: `if(cmd){[/cmd]}`},
+                    { role: 'system',content: `${universmc}+${Pibot}+${bot}+${promptTelegraf}+${serveur}${menu}+${cmd}`},
                     {
                         role: 'system',
-                        name: 'Telegraf',
-                        content: 'Initialisation de la session de brainstorming sur https://github.com/universmc/Telegram.git',
+                        name: 'prompt-telegraf',
+                        content: 'Initialisation de pibot application sur https://github.com/universmc/Telegram.git .https//univers-mc.cloud/Telegram/data/webhook.js & du repertoire racine (`/`) menu - command ./menu.js',
                     },
                     {
                         role: 'assistant',
-                        name: 'Pibot',
-                        content: `groq ${match}.r+${cmd}`,
-                    },  
+                        name: 'pitbot',
+                        content: 'Initialisation de pibot application sur https://github.com/universmc/Telegram.git .https//univers-mc.cloud/Telegram/data/webhook.js & du repertoire racine (`/`) menu - command ./menu.js',
+                    },
                     {
                         role: 'user',
-                        name:'user-telegram',
-                        content: `${Telegram_chatCompletion}`,
-                    },
+                        name: 'telegram-usr',
+                        content: 'Initialisation de pibot application sur https://github.com/universmc/Telegram.git .https//univers-mc.cloud/Telegram/data/webhook.js & du repertoire racine (`/`) menu - command ./menu.js',
+                    }
+                      
                 ],
                 model: 'mixtral-8x7b-32768',
             });
