@@ -21,7 +21,7 @@ bot.on('message', async (ctx) => {
                     {
                         role: 'system',
                         name: 'Telegraf',
-                        content: 'Initialisation de la session de brainstorming sur https://github.com/brainstroming.git',
+                        content: 'Initialisation de la session de brainstorming sur https://github.com/universmc/telegram.git',
                     },
                     {
                         role: 'assistant',
