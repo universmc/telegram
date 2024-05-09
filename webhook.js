@@ -40,7 +40,7 @@ bot.on('message', async (ctx) => {
                     {
                         role: 'system',
                         name: 'prompt-telegraf',
-                        content: 'Initialisation de `Pibot`.r sur https://github.com/universmc/Telegram.git ./webhook & du repertoire racine (`/`)',
+                        content: 'Initialisation de `Pibot`.r sur https://github.com/universmc/Telegram.git ./webhook. & du repertoire racine (`/`)',
                     }
                       
                 ],

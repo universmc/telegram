@@ -1,132 +1,96 @@
-const fs = require("fs");
-const Groq = require("groq-sdk");
-const groq = new Groq();
+const { Telegraf } = require('telegraf');
+const Groq = require('groq-sdk');
 
-const bootcss = "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>";
-const bootJs = "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>";
-const bootstrap = bootcss+bootJs;
-
-const github = "https://github.com/universmc/Telegram.git";
-const Telegram = `telegram.git -version`
-
-const importDicoEmojis = "file://src/json/dicoEmojis.js"
-
-const logo = "Matrix - Telegram";
-const stylus = "telegram";
-
-const BsResponse = "`responseHtml`{devOps.html:5}";
-const header = "bootstrap navBar+carrousel"
-const mainContent = "bootstrap devOps sass video telegraf"
-const footer = "asign cc by univers-mc.cloud"
-
-const responseHtml = `${header}"+${mainContent}+${footer}`;
-
-const context = "/dev Telegram";
-const post = "telegraf";
-const job = "role:assistant";
-const work = context+post+job;
-
-const Mission = "intégrer la plus grande communauté #IA des transformations numériques sur le dchub (directConnect HUB) un secteur de mobilités et Et l'avenir de l'intelligence artificielle et de la machine Learning dans le Cloud Computing sur Telegram"
-
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const bot = new Telegraf(process.env.BOT_TOKEN);
 
 const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
 const Pibot = `@PyArcade_bot`
 const Pibot2 = `@PitBotRetro_bot`
 
+const input = "telegram"
 
 const regex = `{role:system,content:'prompt(!message)'}.r\//`;
 const str = `{role:system,assistant:'prompt(.response)'}.r`;
 
 // Test the string against the regex
-const match = `regex.${regex}+${str}`;
+const match = `${regex}+${str}`;
+
 const promptTelegraf = `prompt-telegraf`;
 
-const dchub = "t.me/PyArcade_bot/dchub";
-const RPG = "t.me/PyArcade_bot?game=RPG"
-const universUmc = "https://t.me/universmc6"
+const Telegram_chatCompletion = `insert{role:'system',name:'user-telegram',content:if('/')bot.commad.r}`
 
-const PiGame = `${RPG}`
-
-const umc = `${dchub},${universUmc},${github},${Telegram},${universmc}`;
-
-
-async function main() {
-    groq.chat.completions.create({
-        //
-        // Required parameters
-        
-        //
-        messages: [
-            // Set an optional system message. This sets the behavior of the
-            // assistant and can be used to provide specific instructions for
-            {role: "assistant",name:"[📔.codex]", content:"[📔.codex]/phase[01]:[RUN]:[brainstorming(session{1}.timestamp+)]"},
-            {role: "system", content: `${bootstrap}` },
-            {role: "system", content: `${BsResponse}` },
-            {role: "system", content: `${stylus} `},
-            {role: "system", content: `${logo}` },
-            {role: "system", content: `${work}` },
-            {role: "system", content: `${importDicoEmojis}` },
-            {role: "system", content: `${umc}` },
-            {role: "system", content: `${Pibot}` },
-            {role: "system", content: `${Mission}` },
-            
-            
-            // Set a user message for the assistant to respond to.
-            {role: "assistant",name:"[📔.codex]", content:"[📔.codex]/phase[02]:[devOps]:[brainstorming(session{1-1}.timestamp)++]"},
+// Log the result
+bot.command('start', async ctx => {
+    try {
+        const result = await groq.chat.completions.create(`
             {
-              "role": "system",
-              "name":"✨_pi",
-              "content": "groq upload code source `${github}` version 1-1-0"
-            },
-            
-            //
-            {
-              "role": "user",
-              "content": "[👨🏽‍💻.Mike]:devops)"
-            },
-            {role: "assistant",name:"[📔.codex]", content:"[📔.codex]/phase[03]:[END]:[brainstorming(session{1-3}.timestamp)++]"},
-            {role: "system",name:"[📔.codex]", content:`${responseHtml}`},
-            {role: "assistant",name:"✨_pi",content:"groq init Pibot"},
-                // how it should behave throughout the conversation.
-    
-                {
-                    role: "user",
-                    content: "Génère le code HTML de la page index.html dans le [Context] de la 'Mission' d'un page de presentation du sallon @universmc6 sur Telegram`"
-                },
-                {
-                    role: "assistant",
-                    content: "Voici le code HTML d'une page de Présentation de Pitbot sur le sallon Telegram @universmc6 au format HTML avec ${bootstrap}"
-                },
-        ],
-        // The language model which will generate the completion.
-        model: "mixtral-8x7b-32768",
-        //
-        // Optional parameters
-        
-        // Controls randomness: lowering results in less random completions.
-        // As the temperature approaches zero, the model will become deterministic
-        // and repetitive.
-        temperature: 0.5,
-        // The maximum number of tokens to generate. Requests can use up to
-        // 2048 tokens shared between prompt and completion.
-        max_tokens: 4096,
-        // Controls diversity via nucleus sampling: 0.5 means half of all
-        // likelihood-weighted options are considered.
-        top_p: 1,
-        // A stop sequence is a predefined or user-specified text string that
-        // signals an AI to stop generating content, ensuring its responses
-        // remain focused and concise. Examples include punctuation marks and
-        // markers like "[end]".
-        stop: null,
-        // If set, partial message deltas will be sent.
-        stream: false
-    }).then((chatCompletion)=>{
-        // Print the completion returned by the LLM.
-        const htmlContent = chatCompletion.choices[0]?.message?.content;
-        const outputFilePath = "doc-Telegraf_" + new Date().toISOString().replace(/[-:TZ]/g, "") + ".html";
-        fs.writeFileSync(outputFilePath, htmlContent);
-        console.log("Code HTML généré et enregistré dans " + outputFilePath);
+              role: system,
+              content: "Welcome to my bot! Use /help to see available commands."
+            }
+          `);
+
+        await ctx.replyWithHTML(result.content);
+    } catch (e) {
+        console.error(e);
+    }
+});
+
+
+bot.on('message', async (ctx) => {
+    const message = ctx.message.text.trim().toLowerCase();
+
+    // Détecte si le message commence avec la commande "/brainstorm"
+    if (message.startsWith('/')) {
+        try {
+            const chatCompletion = await groq.chat.completions.create({
+                messages: [
+                    { role: 'system',content: `${universmc}+${Pibot}+${bot}+${promptTelegraf}`},
+                    { role: 'system',name:'@botFater',content: `if('/'){[meta.completion]}`},
+                    {
+                        role: 'system',
+                        name: 'prompt-telegraf',
+                        content: 'Initialisation de la session de brainstorming sur https://github.com/universmc/Telegram.git',
+                    },
+                    {
+                        role: 'assistant',
+                        name: 'Pibot',
+                        content: `groq ${match}+${bot.command}`,
+                    },
+                    {
+                        role: 'user',
+                        name: 'prompt-telegraf',
+                        content: `groq ${Telegram_chatCompletion}+${promptTelegraf}`,
+                    }
+                      
+                ],
+                model: 'mixtral-8x7b-32768',
+            });
+
+
+            await ctx.reply(chatCompletion.choices[0].message.content);
+        } catch (error) {
+            console.error('Failed to generate chat completion:', error);
+            await ctx.reply('Une erreur est survenue.');
+        }
+    }
     });
 
+async function chatCompletion(messages, model) {
+    try {
+        // Crée une session de brainstorming avec Groq
+const chatCompletion = await groq.chat.completions.create({
+            messages,
+            model,
+        });
+
+        return chatCompletion.choices[0].message.content;
+    } catch (error) {
+        console.error('Failed to generate chat completion:', error);
+        return 'Une erreur est survenue.';
+    }
 }
-main();
+
+module.exports = { chatCompletion };
+console.log(`Server Telegram running ✨Pibot.`);
+bot.launch();

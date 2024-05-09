@@ -1,6 +1,22 @@
 const { Telegraf } = require('telegraf');
 const Groq = require('groq-sdk');
 
+
+const menu = [
+    start = "Start serveur",
+    dev = "Develloppement piBot",
+    demo = "demotration groq-sdk",
+    brainstroming = "Braintroming Session",
+    pitsat = "Completion Chat",
+    test = "Completion Chat",
+    images = "Completion images",
+    audio = "Completion audio",
+    video = "Completion video",
+    image = "Completion script",
+    help = "Documentation github CoPilote",
+    exit = "Quité le menu"
+]
+
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
