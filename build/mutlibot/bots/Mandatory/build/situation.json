@@ -1,0 +1,19 @@
+{
+    "situation": {
+    "comptesBancaires": {
+    "nombre": 3,
+    "problemesAcces": true
+    },
+    "compteCampagne": {
+    "statut": "inaccessible",
+    "organismeRegulateur": "CNCCFP"
+    },
+    "projets": {
+    "logicielDemocratique": {
+    "type": "AGI",
+    "applications": ["jobs", "métiers", "CV", "agriculture", "industrie", "commerce", "tourisme", "comptabilité", "justice", "éducation", "santé"]
+    }
+    }
+    }
+    }
+    
