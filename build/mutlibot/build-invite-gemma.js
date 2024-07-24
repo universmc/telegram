@@ -1,6 +1,6 @@
 const { Telegraf } = require('telegraf');
 const Groq = require('groq-sdk');
-
+const multi = requiere
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const bot = new Telegraf(process.env.BOT_TOKEN, {

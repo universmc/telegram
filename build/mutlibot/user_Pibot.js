@@ -1,16 +1,16 @@
 const { Telegraf } = require('telegraf');
 const Groq = require('groq-sdk');
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY_GOOGLE });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY_YOUTUBE });
 
-const bot = new Telegraf('7475487226:AAGSNlDnPk6BWneChbqpKUwvFzPVvwdmNM8', {
+const bot = new Telegraf('7229553581:AAESREPhgVvg8Wt-ia53FdQq4jGQ4AZpPI0', {
     telegram: {
       webhookReply: true,
     },
   });
 
 bot.start((ctx) => {
-    ctx.reply('Bienvenue dans notre salon Telegram Google PiBot !');
+    ctx.reply('Bienvenue dans notre salon Telegram YouTube PiBot !');
 });
 let conversationLog = [];
 
@@ -110,10 +110,10 @@ bot.on('message', async (ctx) => {
     try {
         const chatCompletion = await groq.chat.completions.create({
             messages: [
-                {
-                    role: 'system',
-                    content: "Tu es l'intelligence artificielle au cœur de ce salon Telegram @google_Pibot. Nous allons créer un Module google pour notre instance Telegram au coeur de notre code source GROQ."
-                },
+              {
+                role: 'system',
+                content: "Tu es l'intelligence artificielle assistant Youtube (je te laisse innové sur ton nom ... ) dans ce salon Telegram @youtube_Pibot."
+            },
                 {
                     role: 'user',
                     content: userInput,
@@ -147,6 +147,5 @@ module.exports = { chatCompletion };
 
 
 // Ajoutez les commandes et les fonctionnalités spécifiques à ce bot ici
-// Lancement du bot Telegram
-bot.launch();
+
 module.exports = bot;

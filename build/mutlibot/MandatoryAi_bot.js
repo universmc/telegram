@@ -10,7 +10,7 @@ const bot = new Telegraf('7475487226:AAGSNlDnPk6BWneChbqpKUwvFzPVvwdmNM8', {
   });
 
 bot.start((ctx) => {
-    ctx.reply('Bienvenue dans notre salon Telegram Google PiBot !');
+    ctx.reply('Bienvenue dans notre salon Telegram Mandotory !');
 });
 let conversationLog = [];
 
@@ -112,7 +112,7 @@ bot.on('message', async (ctx) => {
             messages: [
                 {
                     role: 'system',
-                    content: "Tu es l'intelligence artificielle au cœur de ce salon Telegram @google_Pibot. Nous allons créer un Module google pour notre instance Telegram au coeur de notre code source GROQ."
+                    content: "Bonjour, Tu es l'intelligence artificielle au cœur de ce salon Telegram @MandatoryAi_bot."
                 },
                 {
                     role: 'user',
@@ -147,6 +147,5 @@ module.exports = { chatCompletion };
 
 
 // Ajoutez les commandes et les fonctionnalités spécifiques à ce bot ici
-// Lancement du bot Telegram
-bot.launch();
+
 module.exports = bot;

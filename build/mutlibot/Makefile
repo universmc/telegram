@@ -41,8 +41,16 @@ update:
 	@git push
 	@echo "✨ Mise à jour Terminé ✨"
 
-multibot:
-	@echo ✨ Start server en cours ✨
+multi: youtube google echo
+
+youtube:
+	@echo ✨ Start youtube_Pibot en cours ✨
+	@node youtube_Pibot.js
+
+google:
+	@echo ✨ Start googe_Pibot server en cours ✨
 	@node google_Pibot.js
-	@node youtube_Pibot.js 
+
+
+echo:
 	@echo ✨ Server is running ✨
