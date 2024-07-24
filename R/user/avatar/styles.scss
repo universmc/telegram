@@ -1,0 +1,15 @@
+#avatar-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.avatar {
+  position: relative;
+  width: 100px;
+  height: 200px;
+}
+

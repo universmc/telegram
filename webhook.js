@@ -1,134 +1,136 @@
 const { Telegraf } = require('telegraf');
 const Groq = require('groq-sdk');
-
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-const bot = new Telegraf('6824523892:AAHw8cW7YSXBOHGqWD4S5--iSQa2OBj-Lmc', {
+
+const bot = new Telegraf('7229553581:AAESREPhgVvg8Wt-ia53FdQq4jGQ4AZpPI0', {
     telegram: {
       webhookReply: true,
     },
   });
 
-  const menu = [
-    start = "Start serveur",
-    dev = "Develloppement piBot",
-    demo = "demotration groq-sdk",
-    brainstroming = "Braintroming Session",
-    pitsat = "Completion Chat",
-    test = "Completion Chat",
-    images = "Completion images",
-    audio = "Completion audio",
-    video = "Completion video",
-    image = "Completion script",
-    help = "Documentation github CoPilote",
-    exit = "Quité le menu"
-]
-const cmd = {
-    'start': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/srv/webhook,js'
-    },
-    'dev': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'demo': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'brainstorming': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: './help.js'
-    },
-    'pisat': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'test': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'text': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'audio': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'image': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'video': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'help': {
-        description: 'Affiche la liste des commandes disponibles.',
-        usage: '/help{match}'
-    },
-    'help': {
-        description: 'Test de fonctionnalité.',
-        usage: '/test{match}'
-    },
-    'exit': {
-        description: 'Brainstorming pour générer des idées créatives.',
-        usage: '/brainstorm{match}'
-    },
-    // Ajoutez d'autres commandes ici sous la même forme
-};
+let conversationLog = [];
 
-const universmc = `https://t.me/+-CukoBUWXL84N2Vk`
-const Pibot = `@PyArcade_bot`
-const PibotRetroArcade = `@PitBotRetro_bot`
-
-const input = "telegram-user"
-
-const regex = `{role:system,content:'prompt(command[messages])'}.r\//`;
-const str = `{role:system,assistant:'prompt(.groq-sdk[response])'}.r`;
-
-// Test the string against the regex
-const match = `${regex}+${str}`;
-
-const promptTelegraf = `prompt-telegraf`;
+bot.use((ctx, next) => {
+    if (ctx.message) {
+        conversationLog.push({
+            user: ctx.message.from.username || ctx.message.from.first_name,
+            message: ctx.message.text,
+            timestamp: new Date()
+        });
+    }
+    return next();
+});
 
 bot.start((ctx) => {
-    ctx.reply('Welcome to Pibot!');
-  });
+    ctx.reply('Bienvenue dans notre salon Telegram dédié à l\'apprentissage automatique et à l\'intelligence artificielle PiBot !');
+});
 
-  
+bot.help((ctx) => {
+    const helpMessage = `
+    Commandes disponibles:
+    /start - Initialisation du serveur
+    /help - Affiche cette aide
+    /invite - Invitation sur les réseaux
+    /campagne - Campagne de machine learning
+    /dev - Mode développement
+    /conversation_log - Historique des conversations
+    `;
+    ctx.reply(helpMessage);
+});
+
+bot.command('conversation_log', (ctx) => {
+    if (conversationLog.length === 0) {
+        ctx.reply('Aucune conversation enregistrée.');
+        return;
+    }
+
+    let logMessage = 'Bilan de la conversation:\n';
+    conversationLog.forEach(entry => {
+        logMessage += `[${entry.timestamp.toLocaleString()}] ${entry.user}: ${entry.message}\n`;
+    });
+
+    ctx.reply(logMessage);
+});
+
+bot.command('invite', (ctx) => {
+    async function sendFacebookInvitation() {
+        // Logique pour envoyer une invitation sur Facebook
+        console.log('Facebook invitation sent.');
+    }
+
+    async function sendInstagramInvitation() {
+        // Logique pour envoyer une invitation sur Instagram
+        console.log('Instagram invitation sent.');
+    }
+
+    async function sendTikTokInvitation() {
+        // Logique pour envoyer une invitation sur TikTok
+        console.log('TikTok invitation sent.');
+    }
+
+    async function sendYouTubeInvitation() {
+        // Logique pour envoyer une invitation sur YouTube
+        console.log('YouTube invitation sent.');
+    }
+
+    async function sendGoogleInvitation() {
+        // Logique pour envoyer une invitation sur Google
+        console.log('Google invitation sent.');
+    }
+
+    const actions = {
+        '/Google': sendGoogleInvitation,
+        '/Facebook': sendFacebookInvitation,
+        '/Instagram': sendInstagramInvitation,
+        '/TikTok': sendTikTokInvitation,
+        '/YouTube': sendYouTubeInvitation,
+    };
+
+    const actionKeys = Object.keys(actions);
+    const actionMessage = actionKeys.map(action => `${action}`).join(', ');
+
+    ctx.reply(`Veuillez spécifier les actions à effectuer sur les réseaux: ${actionMessage}`);
+});
+
+bot.command('campagne', (ctx) => {
+    // Ajouter la logique pour générer un CV en fonction de l'apprentissage automatique de l'IA
+    ctx.reply('Match in Learning..');
+});
+
 bot.on('message', async (ctx) => {
     const message = ctx.message.text.trim().toLowerCase();
 
-    // Détecte si le message commence avec la commande "/"
     if (message.startsWith('/')) {
-        try {
-            const chatCompletion = await groq.chat.completions.create({
-                messages: [
-                    { role: 'system',content: `${universmc}+${Pibot}+${bot}+${promptTelegraf}+${promptTelegraf}`},
-                    {
-                        role: 'system',
-                        name: 'prompt-telegraf',
-                        content: 'Initialisation de `Pibot`.r sur https://github.com/universmc/Telegram.git .https//univers-mc.cloud/Telegram/data/webhook.js & du repertoire racine (`/`) menu - command ./menu.js',
-                    }
-                      
-                ],
-                model: 'mixtral-8x7b-32768',
-            });
-
-
-            await ctx.reply(chatCompletion.choices[0].message.content);
-        } catch (error) {
-            console.error('Failed to generate chat completion:', error);
-            await ctx.reply('Une erreur est survenue.');
-        }
+        return; // Ignorer les commandes
     }
-    });
+
+    const userInput = ctx.message.text;
+    
+    try {
+        const chatCompletion = await groq.chat.completions.create({
+            messages: [
+                {
+                    role: 'system',
+                    content: "Tu es l'intelligence artificielle au cœur de ce salon d'invitation des utilisateurs du web sur mon Telegram avec un BotNet @user_Pitbot. Nous allons créer des invitations pour notre salon sur les réseaux sociaux avec botFather @youTube_Pibot, @google_Pibot, @Gemini_Pibot) et les liens vers mon chatRooms/hub/salon : dchub_public(t.me/dchub_01)) dchub_privé(t.me/dchub_Pibot) app-Telegram https://univers-mc.cloud/Telegram/ invite : https://t.me/user_Pibot/invite dont j'en suis l'administrateur."
+                },
+                {
+                    role: 'user',
+                    content: userInput,
+                },
+            ],
+            model: 'gemma2-9b-it',
+        });
+
+        await ctx.reply(chatCompletion.choices[0].message.content);
+    } catch (error) {
+        console.error('Failed to generate chat completion:', error);
+        await ctx.reply('Une erreur est survenue.');
+    }
+});
 
 async function chatCompletion(messages, model) {
     try {
-        // Crée une session de brainstorming avec Groq
-const chatCompletion = await groq.chat.completions.create({
+        const chatCompletion = await groq.chat.completions.create({
             messages,
             model,
         });
@@ -141,5 +143,11 @@ const chatCompletion = await groq.chat.completions.create({
 }
 
 module.exports = { chatCompletion };
-console.log(`Server Telegram running ✨Pibot.`);
-bot.launch();
+
+console.log(`Server Telegram running ✨.user_Pibot.`);
+bot.launch({
+    webhook: {
+        domain: 'https://univers-mc.cloud/Telegram',
+        path: '/webhook.js',
+    }
+});

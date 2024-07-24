@@ -1,0 +1,97 @@
+$primary-color: #0088cc;
+$secondary-color: #004080;
+$background-color: #000000;
+$text-color: #ffffff;
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: $secondary-color;
+    padding: 1em 0;
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+            li {
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background: linear-gradient(to right, $secondary-color, $primary-color);
+    color: $text-color;
+    text-align: center;
+    padding: 5em 0;
+    .hero-content {
+        h1 {
+            font-size: 3em;
+            margin: 0.5em 0;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+        }
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+    h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        text-align: center;
+    }
+}
+
+.invites {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    li {
+        margin: 1em 0;
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-size: 1.5em;
+            &:hover {
+                color: lighten($primary-color, 20%);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $secondary-color;
+    color: $text-color;
+    text-align: center;
+    padding: 1em 0;
+    p {
+        margin: 0;
+    }
+}
