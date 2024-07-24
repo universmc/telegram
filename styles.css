@@ -1,0 +1,52 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.jumbotron {
+    border-radius: 10px;
+    padding: 2rem 2rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-header {
+    border-bottom: none;
+    padding: 1rem 2rem;
+}
+
+.card-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    color: #333;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.btn-primary {
+    background-color: #0088cc; /* Telegram's color */
+    border-color: #0088cc;
+}
+
+.btn-primary:hover {
+    background-color: #0077b3;
+    border-color: #0077b3;
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #0088cc;
+    border-color: #ffffff;
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0;
+    color: #0077b3;
+    border-color: #f0f0f0;
+}

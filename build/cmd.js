@@ -41,7 +41,7 @@ bot.on('message', async (ctx) => {
                     {
                         role: 'assistant',
                         name: 'Pibot',
-                        content: '*💡* Idée géniale **💻**: Trouver des idées originales et innovantes pour le développement de projet ( Gestion des ressources et de la capacité de l’équipe ).',
+                        content: '*💡* Idée géniale **💻**: Trouver des idées originales et innovantes pour le développement de projet Telegram ( Gestion des ressources et de la capacité de l’équipe ).',
                     },
                     {
                         role: 'user',

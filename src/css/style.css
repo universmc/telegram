@@ -12,18 +12,28 @@ body {
   background-color: #f4f4f4;
   color: #333;
 }
-
+.cms {
+width: 100%;
+background-color: #090012;
+}
 header {
   display: flex;
-  min-width: 100%;
-  background-color: #1c1b1b;
+  flex-direction: column;
+  min-width: 50px;
+  background-color: #090012;
   color: white;
   text-align: center;
-  padding: 10px 0;
 }
-
+.row1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 93vh;
+  padding: 0;
+  margin: 0;
+}
 main {
-  margin: 20px;
+  min-width: 90%;
 }
 .mainContent {
   display: flex;
@@ -36,7 +46,7 @@ main {
 }
 #sommaire {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: start;
   width: 100%;
   gap: 20px;
@@ -46,7 +56,7 @@ main {
   border-radius: 5px;
 }
 .picker {
-background-color:#333;
+background-color:#090012;
 border: none;
 }
 .modal-sheet .modal-dialog {
@@ -57,15 +67,13 @@ border: none;
   padding-bottom: 2rem;
 }
 
+
 .cours-content {
   display: flex;
   justify-content: space-between;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-}
+
 
 #contenuCours {
   width: 90%;
@@ -95,11 +103,13 @@ nav {
 
 /* Ajoutez plus de styles ici selon vos besoins */
 footer {
-  background-color: #333;
+  display: flex;
+  min-height: 7vh;
+  justify-content:end;
+  background-color: #515151;
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
