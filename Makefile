@@ -39,6 +39,7 @@ update:
 	@git add .
 	@git commit -m "update"
 	@git push
+	@echo "✨ Mise à jour Terminé ✨"
 
 build :
 	@echo ✨ Génération de la page HTML en cours ✨

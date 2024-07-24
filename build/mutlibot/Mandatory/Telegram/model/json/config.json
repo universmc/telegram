@@ -1,0 +1,14 @@
+{
+    "cloudProvider": "AWS",
+    "awsAccessKeyId": "<YOUR_ACCESS_KEY>",
+    "awsSecretAccessKey": "<YOUR_SECRET_KEY>",
+    "region": "us-west-2",
+    "dockerImageName": "my-devops-image",
+    "dockerRegistryUrl": "<YOUR_REGISTRY_URL>",
+    "databaseUrl": "mongodb+srv://<USERNAME>:<PASSWORD>@<HOST>/my-devops-db",
+    "monitoringTool": "Datadog",
+    "datadogApiKey": "<YOUR_DATADOG_API_KEY>",
+    "datadogAppKey": "<YOUR_DATADOG_APP_KEY>",
+    "teamNotificationsEmail": "<EMAIL>"
+    }
+    

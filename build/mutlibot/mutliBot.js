@@ -1,4 +1,3 @@
-require('dotenv').config();
 const bot1 = require('./bots/bot1');
 const bot2 = require('./bots/bot2');
 const youtube_Pibot = require('./bots/youtube_Pibot');
