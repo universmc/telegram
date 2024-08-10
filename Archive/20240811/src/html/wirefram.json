@@ -1,0 +1,47 @@
+{
+    "Wireframe": {
+      "Header": {
+        "Logo": "Logo du salon 'Univers-MC' en style moderne",
+        "Navigation": [
+          "À propos",
+          "Événements",
+          "Ressources",
+          "Forum"
+        ],
+        "Banner": "Bannière de bienvenue avec un message d'introduction et une image ou animation interactive"
+      },
+      "MainSection": {
+        "Introduction": "Description du salon, de son objectif et de ses activités principales",
+        "AssistantPresentation": "Description des fonctionnalités de @PyArcade_bot"
+      },
+      "ResourcesSection": {
+        "Links": [
+          "Tutoriels",
+          "Articles",
+          "Vidéos"
+        ],
+        "InteractiveWidgets": "Widgets pour démonstrations ou mini-applications en Node.js"
+      },
+      "CommunitySection": {
+        "UserTestimonials": "Zone pour les témoignages des utilisateurs",
+        "JoinInvitation": "Invitation à rejoindre le salon avec QR code ou lien direct"
+      },
+      "Footer": {
+        "ContactInfo": "Informations de contact",
+        "SocialMediaLinks": "Liens vers les réseaux sociaux",
+        "Copyright": "Droits d'auteur et mentions légales"
+      }
+    },
+    "CharteGraphique": {
+      "Colors": "Palette de bleu et gris",
+      "Typography": "Polices modernes et lisibles",
+      "IconsAndButtons": "Design épuré avec formes géométriques simples et effets au survol",
+      "ImagesAndAnimations": "Graphiques liés à l'intelligence artificielle et au machine learning"
+    },
+    "Technologies": {
+      "Frontend": ["HTML5", "SCSS", "JavaScript"],
+      "Backend": ["Node.js", "API Telegram"],
+      "Database": "Groq-SQL"
+    }
+  }
+  

@@ -1,0 +1,24 @@
+[       
+    {
+    "titre": "hub Telegram",
+    "sousSections": [
+        {
+            "sousTitre": "Introduction",
+            "contenu": "Présentation de l'agent IA le développement du projet dchub -app."
+        },
+        {
+            "sousTitre": "Groq-sdk",
+            "contenuMarkdown": "src/md/welcom.md"
+        },
+        {
+            "sousTitre": "sommaire",
+            "contenuMarkdown": "src/md/sommaire.md"
+        },
+        {
+            "sousTitre": "introduction",
+            "contenuMarkdown": "src/md/intro.md"
+        }
+        
+    ]
+    }
+]

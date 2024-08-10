@@ -1,0 +1,14 @@
+
+Bienvenue dans notre salon Telegram `https://t.me/+-CukoBUWXL84N2Vk` @univers-mc pour discuter du BotNet et de notre projet. Nous sommes ravis de vous avoir ici pour discuter de la façon dont nous pouvons intégrer le BotNet dans notre système. Pour commencer, nous allons vous présenter notre instance de groq-sdk et discuter de la façon dont nous pouvons l'utiliser pour atteindre nos objectifs. Nous sommes impatients de travailler avec vous et de voir ce que nous pouvons accomplir ensemble.
+
+Instance de groq-sdk:
+
+* Version: v1.0.0
+* Langage: JavaScript
+* Dépendances: telegraf, node-fetch, dotenv
+* Fonctionnalités: envoi et réception de messages, gestion des utilisateurs, gestion des commandes
+
+Nous espérons que cela vous donnera une bonne idée de ce que nous avons actuellement et de la façon dont nous pouvons travailler ensemble pour améliorer notre instance de groq-sdk. Nous sommes impatients de recevoir vos commentaires et vos suggestions pour améliorer notre instance.
+
+Cordialement,
+L'équipe de développement de @univers-mc</s>

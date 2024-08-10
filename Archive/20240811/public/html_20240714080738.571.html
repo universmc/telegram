@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+header {
+background-image: url("bannier.jpg");
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+text-align: center;
+}
+
+section {
+padding: 20px;
+}
+
+section.presentation {
+background-color: #f2f2f2;
+}
+
+section.projets {
+background-color: #e0e0e0;
+}
+
+section.temoignages {
+background-color: #d0d0d0;
+}
+
+section.contact {
+background-color: #c0c0c0;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Bienvenue sur mon portfolio</h1>
+</header>
+
+<section class="presentation">
+<h2>Présentation</h2>
+<p>Je suis un professionnel expérimenté dans mon domaine. Je suis passionné par mon travail et je suis toujours à la recherche de nouveaux défis.</p>
+</section>
+
+<section class="projets">
+<h2>Projets</h2>
+<ul>
+<li>Projet 1</li>
+<li>Projet 2</li>
+<li>Projet 3</li>
+</ul>
+</section>
+
+<section class="temoignages">
+<h2>Témoignages</h2>
+<blockquote>
+<p>J'ai travaillé avec ce professionnel sur plusieurs projets et je suis toujours satisfait de son travail.</p>
+<cite>- Client satisfait</cite>
+</blockquote>
+</section>
+
+<section class="contact">
+<h2>Contact</h2>
+<p>N'hésitez pas à me contacter pour toute demande de renseignements ou pour discuter d'un projet.</p>
+<form>
+<label for="nom">Nom</label>
+<input type="text" id="nom" name="nom">
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email">
+
+<label for="message">Message</label>
+<textarea id="message" name="message"></textarea>
+
+<input type="submit" value="Envoyer">
+</form>
+</section>
+
+</body>
+</html>

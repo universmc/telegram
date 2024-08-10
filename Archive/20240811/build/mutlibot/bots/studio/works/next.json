@@ -1,0 +1,27 @@
+{
+    "framework": "Next.js",
+    "description": "Un framework open-source pour les applications web React",
+    "features": [
+    {
+    "title": "Rendu côté serveur (SSR)",
+    "description": "Permet de rendre vos composants React côté serveur, améliorant les performances et le SEO"
+    },
+    {
+    "title": "Génération de sites statiques (SSG)",
+    "description": "Générez des pages HTML statiques à partir de vos composants React au moment de la génération, ce qui améliore les temps de chargement et les performances"
+    },
+    {
+    "title": "Découpage de code automatique",
+    "description": "Next.js divise automatiquement votre code en morceaux plus petits, ce qui réduit le temps de chargement initial de votre application"
+    },
+    {
+    "title": "Routes API",
+    "description": "Créez des points de terminaison API dans votre application sans avoir besoin d'un serveur séparé"
+    },
+    {
+    "title": "Déploiement facile",
+    "description": "Vercel offre une plateforme conviviale pour le déploiement d'applications Next.js, avec un support intégré pour les fonctions serverless, les réseaux d'edge et bien plus encore"
+    }
+    ]
+    }
+    

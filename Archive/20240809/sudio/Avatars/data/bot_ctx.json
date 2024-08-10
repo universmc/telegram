@@ -1,0 +1,50 @@
+{
+    "projectDetails": {
+      "components": [
+        {
+          "name": "Three.js",
+          "description": "Powerful JavaScript framework for creating 3D worlds in your browser web. Imagines 3D avatars interacting with each other!"
+        },
+        {
+          "name": "GROQ SDK",
+          "description": "Allows interaction with a dynamic and modular database. It enables us to manage information about avatars, user actions, and more."
+        },
+        {
+          "name": "Gemma 2-9B-it",
+          "description": "Google's language model, great for understanding natural language and generating answers, descriptions, or even actions based on user commands."
+        }
+      ],
+      "goals": [
+        {
+          "aim": "Users of your Telegram channel @Avatars_Pibot can create and control 3D avatars.",
+          "functionality": "Gemma 2-9B-it will interpret their commands and make the avatars interact in a dynamic 3D environment created with Three.js.",
+          "management": "GROQ SDK handles data and system integrity."
+        }
+      ],
+      "questionsForClarity": [
+        {
+          "questionNumber": 1,
+          "text": "Level of Interaction:",
+          "followUpQuestions": [
+            "Do your users want to create animations?",
+            "Dialogues among avatars?",
+            "Or something specific?"
+          ]
+        },
+        {
+          "questionNumber": 2,
+          "text": "Aesthetics:",
+          "followUpQuestions": [
+            "Do you have a specific vision for the appearance of avatars and the 3D environment?"
+          ]
+        },
+        {
+          "questionNumber": 3,
+          "text": "Features:",
+          "followUpQuestions": [
+            "What additional features would you like to include in the channel beyond creating avatars? (Games, collaboration, etc.)"
+          ]
+        }
+      ]
+    }
+  }

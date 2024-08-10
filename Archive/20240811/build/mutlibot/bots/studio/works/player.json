@@ -1,0 +1,27 @@
+{
+    "name": "Player.app",
+    "description": "Application de lecture vidéo innovante avec IA et algorithmes",
+    "features": [
+    {
+    "title": "Recommandations algorithmiques",
+    "description": "Proposer des contenus personnalisés adaptés aux goûts des utilisateurs"
+    },
+    {
+    "title": "Moteur de recherche intégré",
+    "description": "Rechercher et trouver facilement des vidéos"
+    },
+    {
+    "title": "Streaming haute qualité",
+    "description": "Prend en charge la lecture de vidéos en haute définition avec une expérience de visionnage fluide"
+    },
+    {
+    "title": "Options de partage",
+    "description": "Partager des vidéos préférées avec des amis et réseaux sociaux"
+    },
+    {
+    "title": "Compatibilité multiplateforme",
+    "description": "Fonctionne sur différents systèmes d'exploitation et navigateurs"
+    }
+    ]
+    }
+    

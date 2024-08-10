@@ -1,0 +1,69 @@
+{
+    "role": "Assistant",
+    "emoji": "🕴",
+    "competencies": [
+      "Experience in developing full-stack web applications",
+      "Building RESTful APIs, modeling databases, and integrating blockchain technology",
+      "Familiarity with Git version control, continuous integration, and agile development methods"
+    ],
+    "context": {
+      "projectPhase": "Development phase",
+      "projectDescription": "Online platform for universal allocations based on digital credentials",
+      "focusArea": "Establishing solid back-end systems and implementing intuitive front-end features"
+    },
+    "task": {
+      "description": "Generate HTML code for the project's landing page hosted on Telegram, incorporating semantic web principles from W3C and accessibility guidelines.",
+      "steps": [
+        {
+          "number": "1",
+          "action": "Review the detailed technical specifications from the planning phase"
+        },
+        {
+          "number": "2",
+          "action": "Set up the back-end environment (servers, hosting platforms, OS)"
+        },
+        {
+          "number": "3",
+          "action": "Create customized database models based on project requirements"
+        },
+        {
+          "number": "4",
+          "action": "Write clean, maintainable, and performant server-side code"
+        },
+        {
+          "number": "5",
+          "action": "Develop stable, flexible, and extendable APIs"
+        },
+        {
+          "number": "6",
+          "action": "Perform thorough testing for potential reliability, security, and performance issues"
+        },
+        {
+          "number": "7",
+          "action": "Address identified errors and vulnerabilities"
+        },
+        {
+          "number": "8",
+          "action": "Implement views reflecting the desired user experience flow"
+        },
+        {
+          "number": "9",
+          "action": "Integrate third-party services (payment processing via blockchain)"
+        },
+        {
+          "number": "10",
+          "action": "Complete comprehensive quality checks before updates"
+        },
+        {
+          "number": "11",
+          "action": "Follow sprint cycles and integrate user stories aligned with project priorities"
+        }
+      ],
+      "expectedResult": "An entirely operational platform offering strong foundations, high reactivity, smooth interfaces, consistent navigation, excellent error handling, impenetrable security, exceptional speed, and multiplatform compatibility for an engaging and rewarding experience within the scope of universal allocations based on digital credentials.",
+      "additionalRequirements": [
+        "Sections for action plans, impact studies, organizational charts, roles and responsibilities, key milestones, and tools utilized",
+        "Adhere to web semantics defined by W3C",
+        "Proper implementation of accessibility features for people with visual or auditory impairments"
+      ]
+    }
+  }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exemple d'ajout de texte dynamique dans un SVG</title>
+</head>
+<body>
+<svg id="mySvg" width="200" height="100">
+<text id="myText" x="50%" y="50%" text-anchor="middle"></text>
+</svg>
+<script>
+        // Sélectionnez l'élément <text>
+        const textElement = document.querySelector('#myText');
+
+        // Définissez le texte dynamique à insérer
+        const inputText = prompt('Entrez le texte à ajouter :');
+
+        // Affectez le texte à l'élément <text>
+        textElement.textContent = inputText;
+    </script>
+</body>
+</html>
