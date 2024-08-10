@@ -13,8 +13,10 @@ body {
   color: #333;
 }
 .cms {
-width: 100%;
-background-color: #090012;
+  display: flex;
+  flex-direction: row;
+  background-color: #090012;
+  width: 80%;
 }
 header {
   display: flex;
@@ -106,7 +108,7 @@ footer {
   display: flex;
   min-height: 7vh;
   justify-content:end;
-  background-color: #515151;
+  background-color: #090012;
   color: white;
   text-align: center;
   padding: 10px 0;

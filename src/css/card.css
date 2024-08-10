@@ -1,31 +1,41 @@
+.card-contenair {
+    height: 80%;
+    align-items: center;
+    margin:25px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    display: flex;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    width:255px;
+    height: 155px;
 }
 
-.card-header {
-    border-bottom: none;
-    padding: 2rem;
+.iO-output {
+    border:solid black 1px;
+    border-radius:5%;
+    height: 100%;
+    width:65%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
-
-.card-title {
-    color: #0088cc; /* Telegram's color */
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-
-.card-text {
-    color: #333;
-    font-size: 1rem;
-    margin: 1rem 0;
-}
-
-.btn-Telegram {
-    background-color: #0088cc; /* Telegram's color */
-    border-color: #0088cc;
-}
-
-.btn-primary:hover {
-    background-color: #0077b3;
-    border-color: #0077b3;
+.Io-input {
+    border:solid black 1px;
+    border-radius:5%;
+    height: 100%;
+    width:34%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
