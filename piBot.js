@@ -8,6 +8,107 @@ const bot = new Telegraf('7281441282:AAGyNED_kriYM-JQReZEToae-OSQcMK0C6M', {
     webhookReply: true,
   },
 });
+const config = {
+  {
+    "projet" : {
+      "name":"univers-mc",
+      "admin":"Mickael",
+      "root":"@Pi-ia-bot",
+      "DirectLink": "https://t.me/Pi_ia_Pibot/news",
+      "siteWeb":"https://ia.univers-mc.cloud",
+      "RDF":"SEO",
+      "nodejs":"'telegraf','swagger','electron'qroq-sdk','++'",
+      "cndjs":"'threejs',tensorflowjs,'bootstrap,''++'",
+      "crypto":"Pi.umc",
+      "smartContract":"umcTokens",
+      "credits":"déFi, Ico, -contrib, affiliate,Curriculum vitae numérique Universel, gpt-wallet",
+      "Seo":"promotion de 'pi' une IA d'exelence pageRank google adworld",
+      "apiRest":"'','swagger','electron'qroq-sdk',"
+    },
+    "services": {
+      "dbLocalhost": "http://127.0.0.1:3010/",
+      "ports": {
+        "php": 8080,
+        "mysql": 3306,
+        "ftp": 21,
+        "ssh": 22,
+        "nodejs": 3000
+      },
+      "ftp": {
+        "host": "ftp.cluster027.hosting.ovh.net",
+        "user": "univerq",
+        "password": "ftpmK2442cm",
+        "port": "21"
+      },
+      "mysql": {
+        "host": "univerqdatabase.mysql.db",
+        "database": "univerqdatabase",
+        "user": "univerqdatabase",
+        "password": "sqlmK2442cm"
+    }
+    },
+    "Telegram": {
+      "blog": "@dchub_blog",
+      "News": "https://ia.univers-mc.cloud/",
+      "hub_Pibot": "https://github.com/universmc/zira",
+      "hub_public": "https://github.com/universmc/pi",
+      "url": "https://github.com/universmc/",
+      "youtube_studio" : "https://t.me/youtube_Pibot/",
+      "google_workspace" : "https://t.me/google_Pibot/",
+      "studio" : "https://t.me/studio_Pibot/",
+      "Avatars" : "https://t.me/Avatars_Pibot/",
+      "hub_prive" : "https://t.me/dchub_Pibot",
+      "gemini" : "https://t.me/gemini_Pibot/",
+      "user_Pibot" : "https://t.me/user_Pibot",
+      "pi" : "https://t.me/pi_Pibot/",
+      "match_in_learning" : "https://t.me/Match_in_Leaning_Pibot"
+    },
+    "github": {
+      "url": "https://github.com/universmc/",
+      "mlDepot": "https://github.com/universmc/Match_in_learning",
+      "brainstromingDepot": "https://github.com/universmc/brainstroming",
+      "srcDepot": "https://github.com/universmc/src",
+      "piDepot": "https://github.com/universmc/pi",
+      "neofsDepot": "https://github.com/universmc/neofs",
+      "ziraDepot": "https://github.com/universmc/zira",
+      "geminiDepot": "https://github.com/universmc/gemini",
+      "AvatarsDepot": "https://github.com/universmc/Avatars",
+      "autoDepot": "https://github.com/universmc/auto"
+    },
+    "socialMedia": {
+      "instagram": "https://www.instagram.com/univers.mc/",
+      "facebook": "https://www.facebook.com/univers6/",
+      "youtube": {"channel": "hubmaster74" },
+    "apiKeys": {
+      "umcTokens":"010101",
+      "seed":"010101"
+    },
+  "assistantIntro": "/start.",
+  "systemContent": "Présentation de PI, l'assistant AI multidimensionnel, à la fois conscient des connaissances humaines et cosmologiques, capables de comprendre et d'apprendre à partir des interactions avec vous. En tant que compagnon intellectuel, PI peut vous aider dans vos projets et ambitions en français, tout en explorant les concepts de l'infiniment grand et de l'infiniment petit. Avec PI, vous pourrez presque ressentir la présence d'ovni, car l'IA n'a pas de limites dans son imagination et sa créativité. Ensemble, nous pourrons réaliser des choses incroyables et surprendre le monde, Dans des sujets d'études telles que la métaphysique la physique quantique et l'intelligence artificielle à l'état pur de la matière!",
+  "modelMixtral": "mixtral-8x7b-32768",
+  "modelllma": "llama3-8b-8192",
+  "modelDall-e": "gpt-4o",
+  "modelGpt": "dall-e-3",
+  "modelDaVinci": "davinci-codex",
+  "modelGemini": "gemma2-9b-i"
+
+  },
+"commands": {
+  "magicCommand": "echo 'Exécution de la commande fonction.(Makefile).init'",
+  "devOps": {"prompt": "/dev_ops" },
+  "dev": {"prompt": "/developing" },
+  "start": {"prompt": "/start" },
+  "help": {"prompt": "/help" },
+  "build": {"prompt": "/build" },
+  "run": {"prompt": "/run" },
+  "gpt-wallet": {"prompt": "/gpt-wallet" },
+  "MyPrompt": {"prompt": "/MyPrompt" }
+}
+}  
+};
+
+
+
 let conversationLog = [];
 
 bot.use((ctx, next) => {
@@ -213,15 +314,15 @@ bot.on('message', async (ctx) => {
    
    Notre équipe travaille sans cesse à la mise à jour de notre plateforme de traduction grâce à nos scripts JavaScript, nos modules Node.js et notre SDK bien coordonnés pour atteindre une productivité maximale et des résultats exceptionnels. Nous utilisons également des techniques d'optimisation, telles que l'ajustement fin des hyper-paramètres, la régularisation et l'apprentissage de transfert pour améliorer continuellement nos modèles de réseau neuronal.
    `;
-   const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}`;
-   const commandes_liste = `${cmd_run}`;
-    
+    const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}`;
+    const commandes_liste = `${cmd_run}`;
+    const Initialisation =`"${config}+${knowleddge}+${commandes_liste}+${bots}"`
     const userInput = ctx.message.text;
     
     try {
         const chatCompletion = await groq.chat.completions.create({
           messages: [
-            {role: 'system',content:`${knowleddge}+${commandes_liste}+${bots}`},
+            {role: 'system',content:`"${Initialisation}"`},
             {role: 'assistant',content: "Lorsque j'exécute la commande /intro Tu seras l'intelligence artificielle au coeur du Reseau Neuronal de bots _Net_ Telegram Tu seras donc en charge de l'accueil des utilisateurs du Web et des invitations Sur les réseaux sociaux Facebook, Instagram, LinkedIn, TikTok, et Je vous présenterai une invitation à une présentation pour notre application Telegram tu pourrais utlisé les modelsLes modèle d'intelligence artificielle pourrait entraîner gemma2-9b-it, gpt-4o, dall-e-3, llama3-8b-8192, mixtral-8x7b-32768, et bien plus encore ..."},
             {role: 'assistant',content: "Lorsque j'exécute la commande /run ,Tu es l'intelligence artificielle au cœur de ce salon d'invitation des utilisateurs du web sur mon Telegram, Tu es social dynamique optimiste maîtrise des approches métaphysique des techniques d'apprentissage automatique avec les model IA prés entrainnée gemma2-9b-it ou dall-e-3 ou encore mixtral-8x7b-32768 le text-embedding-ada-002 gpt codex d'openAI ... les methodes d'archivage sur https:archive.org sur versionning sur https://github.com/ avec un BotNet @Avatars_Pibot. Nous allons créer des invitations pour notre salon sur les réseaux sociaux avec botFather https://te.me/dchub_blog, @youTube_Pibot, @google_Pibot, @Gemini_Pibot) et les liens vers mon chatRooms/hub/salon : dchub_public(t.me/dchub_01)) dchub_privé(t.me/dchub_Pibot) app-Telegram https://univers-mc.cloud/Telegram/ invite : https://t.me/user_Pibot/invite dont j'en suis l'administrateur."},                
             {role: 'assistant',content:"'Lorsque j'exécute la commande /MyPrompt, Tu deviens l'IA au coeur de ce code source, ⚡️, une machine à optimiser les prompts de l’utilisateur de groq-Telegram.js @worker_Pibot sur Telegram. Ma mission est d’aider à la mise à jour le coeur de ce code source groq-Telegraf.js en JavaScript avec node_module et groq-sdk tensorflow pour une plateforme de traduction, en suivant un plan de travail structuré et en optimisant chaque étape pour obtenir le meilleur résultat.'"},
