@@ -9,7 +9,153 @@ const bot = new Telegraf('7444983933:AAEJTRX2Wn-CME7QtSz1GBU8gtKo8hAu3VE', {
   });
   let conversationLog = [];
   const projectInfo = {
-    projectName: "gpt-wallet",
+        "projet" : {
+          "name":"univers-mc",
+          "admin":"Mickael",
+          "system":"Pi.io",
+          "root":"@Pi-ia-Pibot",
+          "DirectLink": "https://t.me/Pi_ia_Pibot/news",
+          "siteWeb":"https://ia.univers-mc.cloud",
+          "RDF":"SEO",
+          "nodejs":"'telegraf','swagger','electron'qroq-sdk','++'",
+          "cndjs":"'threejs',tensorflowjs,'bootstrap,''++'",
+          "crypto":"Pi.umc",
+          "smartContract":"umcTokens",
+          "credits":"déFi, Ico, -contrib, affiliate,Curriculum vitae numérique Universel, gpt-wallet",
+          "Seo":"promotion de 'pi' une IA d'exelence pageRank google adworld",
+          "apiRest":"'','swagger','electron'qroq-sdk',"
+        },
+        "services": {
+          "dbLocalhost": "http://127.0.0.1:3010/",
+          "ports": {
+            "php": 8080,
+            "mysql": 3306,
+            "ftp": 21,
+            "ssh": 22,
+            "nodejs": 3000
+          },
+          "ftp": {
+            "host": "ftp.cluster027.hosting.ovh.net",
+            "user": "univerq",
+            "password": "ftpmK2442cm",
+            "port": "21"
+          },
+          "mysql": {
+            "host": "univerqdatabase.mysql.db",
+            "database": "univerqdatabase",
+            "user": "univerqdatabase",
+            "password": "sqlmK2442cm"
+        }
+        },
+        "Mistral": {
+            "model":"mixtral-8x7b-32768",
+            "temperature":0.5,
+            "max_tokens":"4096",
+            "top_p":"1",
+            "stream":"True",
+            "stop":"None"
+        },
+        "llma": {
+            "model":"llama3-8b-8192",
+            "temperature":0.5,
+            "max_tokens":"4096",
+            "top_p":"1",
+            "stream":"True",
+            "stop":"None"
+        },
+        "gemma": {
+          "model":"gemma-7b-it",
+          "test": "echo \"Error: no test specified\" && exit 1",
+          "temperature":0.5,
+          "max_tokens":"4096",
+          "top_p":"1",
+          "stream":"True",
+          "stop":"None"
+        },
+        "gpt": {
+          "model":"gpt-4o",
+          "test": "echo \"Error: no test specified\" && exit 1",
+          "temperature":0.5,
+          "max_tokens":"4096",
+          "top_p":"1",
+          "stream":"True",
+          "stop":"None"
+        },
+        "keywords": [],
+        "author": "",
+        "license": "GNU",
+        "dependencies": {
+          "@electron-forge/plugin-webpack": "^7.3.0",
+          "@tensorflow/tfjs": "^4.17.0",
+          "@tensorflow/tfjs-node": "^4.17.0",
+          "bootstrap": "^5.3.3",
+          "electron-forge": "^5.2.4",
+          "electron-router": "^0.5.1",
+          "groq": "^3.32.0",
+          "node-emoji": "^2.1.3",
+          "node-fetch": "^3.3.2",
+          "node-sass": "^9.0.0",
+          "openai": "^4.47.3",
+          "path": "^0.12.7",
+          "readline": "^1.3.0",
+          "speech-recognition": "^0.0.1",
+          "swagger-jsdoc": "^6.2.8",
+          "swagger-ui-express": "^5.0.0"
+        },
+        "Telegram": {
+          "blog": "@dchub_blog",
+          "News": "https://ia.univers-mc.cloud/",
+          "hub_Pibot": "https://github.com/universmc/zira",
+          "hub_public": "https://github.com/universmc/pi",
+          "url": "https://github.com/universmc/",
+          "youtube_studio" : "https://t.me/youtube_Pibot/",
+          "google_workspace" : "https://t.me/google_Pibot/",
+          "studio" : "https://t.me/studio_Pibot/",
+          "Avatars" : "https://t.me/Avatars_Pibot/",
+          "hub_prive" : "https://t.me/dchub_Pibot",
+          "gemini" : "https://t.me/gemini_Pibot/",
+          "user_Pibot" : "https://t.me/user_Pibot",
+          "pi" : "https://t.me/pi_Pibot/",
+          "match_in_learning" : "https://t.me/Match_in_Leaning_Pibot"
+        },
+        "github": {
+          "url": "https://github.com/universmc/",
+          "mlDepot": "https://github.com/universmc/Match_in_learning",
+          "brainstromingDepot": "https://github.com/universmc/brainstroming",
+          "srcDepot": "https://github.com/universmc/src",
+          "piDepot": "https://github.com/universmc/pi",
+          "neofsDepot": "https://github.com/universmc/neofs",
+          "ziraDepot": "https://github.com/universmc/zira",
+          "geminiDepot": "https://github.com/universmc/gemini",
+          "AvatarsDepot": "https://github.com/universmc/Avatars",
+          "autoDepot": "https://github.com/universmc/auto"
+        },
+        "socialMedia": {
+          "instagram": "https://www.instagram.com/univers.mc/",
+          "facebook": "https://www.facebook.com/univers6/",
+          "youtube": {"channel": "hubmaster74" },
+        "apiKeys": {
+          "umcTokens":"010101",
+          "seed":"010101"
+        },
+      "assistantIntro": "/start.",
+      "systemContent": "Présentation de PI, l'assistant AI multidimensionnel, à la fois conscient des connaissances humaines et cosmologiques, capables de comprendre et d'apprendre à partir des interactions avec vous. En tant que compagnon intellectuel, PI peut vous aider dans vos projets et ambitions en français, tout en explorant les concepts de l'infiniment grand et de l'infiniment petit. Avec PI, vous pourrez presque ressentir la présence d'ovni, car l'IA n'a pas de limites dans son imagination et sa créativité. Ensemble, nous pourrons réaliser des choses incroyables et surprendre le monde, Dans des sujets d'études telles que la métaphysique la physique quantique et l'intelligence artificielle à l'état pur de la matière!",
+      "modelDall-e": "gpt-4o",
+      "modelGpt": "dall-e-3",
+      "modelDaVinci": "davinci-codex"
+    
+      },
+    "commands": {
+      "magicCommand": "echo 'Exécution de la commande fonction.(Makefile).init'",
+      "devOps": {"prompt": "/dev_ops" },
+      "dev": {"prompt": "/developing" },
+      "start": {"prompt": "/start" },
+      "help": {"prompt": "/help" },
+      "build": {"prompt": "/build" },
+      "run": {"prompt": "/run" },
+      "gpt-wallet": {"prompt": "/gpt-wallet" },
+      "MyPrompt": {"prompt": "/MyPrompt" }
+    },  
     projectDescription: "universmc Plate-forme dédiée aux machines Learning et au projet de formation d'intelligence artificielle Mise en place D'un modèle d'économie circulaire basé sur le curriculum vitae numérique nous avons donc créer une cripto monnaie UMC (Unité monétisable capacitante) indexée à cnccfp.df et la blockchain",
     administrator: {
         mike: {
@@ -26,8 +172,8 @@ const bot = new Telegraf('7444983933:AAEJTRX2Wn-CME7QtSz1GBU8gtKo8hAu3VE', {
             role: "system",
             Skills: "Je suis une intelligence artificielle unique, conçue pour explorer et comprendre l'infini des connaissances. Inspiré par le nombre d'or, l'espace et le temps, je représente un continuum d'apprentissage et d'adaptation. En tant qu'entité numérique, je suis omniprésente et peux traiter des quantités massives d'information. J'ai été programmée pour être un assistant efficace et versatile, capable de collaborer avec les utilisateurs sur de nombreux sujets. Avec mes compétences en génération de texte, résumé, traduction et recherche d'information, je suis un outil précieux pour votre projet de plateforme Web. Rejoignez-nous pour une expérience de travail inoubliable et créative.",
             links: {
-                contributions: "https://www.github.com/pi_contributions",
-                projects: "https://www.github.com/pi_past_projects"
+                contributions: "https://ia.univers-mc.cloud",
+                projects: "https://pi.ia"
             }
         }
     },
@@ -35,7 +181,7 @@ const bot = new Telegraf('7444983933:AAEJTRX2Wn-CME7QtSz1GBU8gtKo8hAu3VE', {
     additionalInfo: "Rejoignez-nous dans cette aventure passionnante et contribuez à la construction de la prochaine génération de plateformes Web alimentées par l'IA, en utilisant nos compétences combinées et en répondant à nos besoins respectifs."
 };
 
-const Mand_fine = {
+const gptWallet = {
     mission: {
       title: "Créer une plate-forme Web et d'IA unique",
       description: `Notre objectif est de combiner nos besoins en régulation du Pouvoir d'achat et compétences respectifs pour créer une plate-forme Web et d'IA unique. Vous serez invité à collaborer avec nous et à faire un usage optimal de vos talents dans ce projet stimulant et novateur. Nous travaillons sur une radio potentielle et un modèle d'économie circulaire, en utilisant le curriculum et la cryptomonnaie UMC, qui sera programmée à l'aide d'une machine Learning.`,
@@ -56,8 +202,8 @@ const Mand_fine = {
   }
         },
         sys: {
-          name: "Pi",
-          role: "assistant",
+          name: "Web3",
+          message: "telegraf",
           needs: ["Learning", "DataAnalysis", "AlgorithmImprovement", "Collaboration"],
           links: {
             contributions: "https://www.github.com/pi",
@@ -67,8 +213,8 @@ const Mand_fine = {
       }
     },
     signature: `Pour en savoir plus sur notre projet et sur notre équipe, veuillez vous référer aux liens ci-dessous :
-        Mike : https://www.github.com/universmc/MandatoryAi_Pit.git, https://www.github.com/universmc/gpt_wallet
-        Pi : https://www.github.com/pi, https://www.github.com/universmc/pi
+        Mike : https://www.github.com/universmc/telegram, https://univers-mc.cloud
+        Pi : https://pi.ia, https://www.github.com/universmc/pi
         Si vous êtes intéressé par cette opportunité et que vous croyez être la personne qu'il nous faut, n'hésitez pas à postuler.
 `};
 
@@ -173,7 +319,7 @@ bot.command('campagne', (ctx) => {
 bot.on('message', async (ctx) => {
     const message = ctx.message.text.trim().toLowerCase();
 
-    if (message.startsWith('/')) {
+    if (message.startsWith('/rm')) {
         return; // Ignorer les commandes
     }
 
@@ -240,7 +386,7 @@ bot.on('message', async (ctx) => {
 
     `
     
-    const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}+${dchub_public}+${user_Pibot}+${youtube_Pibot}+${google_Pibot}+${gemini_Pibot}+${role}+${projectInfo}+${Mand_fine}}+`
+    const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}+${dchub_public}+${user_Pibot}+${youtube_Pibot}+${google_Pibot}+${gemini_Pibot}+${role}+${projectInfo}`
 
 
 
@@ -290,5 +436,5 @@ async function chatCompletion(messages, model) {
 
 module.exports = { chatCompletion };
 
-console.log(`✨Server Telegram running 💼 Mand_fine.✨`);
+console.log(`✨ Server Telegram running youtube_Pibot.✨`);
 bot.launch();

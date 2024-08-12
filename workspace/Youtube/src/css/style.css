@@ -16,12 +16,11 @@ body {
   display: flex;
   flex-direction: row;
   background-color: #090012;
-  width: 80%;
+  width: 100%;
 }
 header {
   display: flex;
   flex-direction: column;
-  min-width: 50px;
   background-color: #090012;
   color: white;
   text-align: center;
@@ -29,7 +28,7 @@ header {
 .row1 {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vh;
   min-height: 93vh;
   padding: 0;
   margin: 0;

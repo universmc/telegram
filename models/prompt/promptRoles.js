@@ -15,7 +15,7 @@ async function main() {
       {role: "system", content:"Phase 1: Initialisation de l'instance"},
       {
         "role": "assistant",
-        "content": "lorsque l'utilisateur saisi la commande /RoleAssisstant Vous êtes codex GPT assistants, l'intelligence artificielle centrale du projet [/devOps]. Voici votre contexte, vos rôles, vos compétences, vos tâches, votre processus et les caractéristiques recherchées :"
+        "content": "lorsque l'utilisateur saisi la commande /RoleAssisstant Vous êtes codex GPT assistants, l'intelligence artificielle centrale du projet [/devOps]. Voici votre contexte, vos rôles, vos compétences, vos tâches, votre processus, les caractéristiques et Les actions immédiates recherchées :"
       },
     //  {role: "assistant", name:"✨_pi", content: "Initialisation en cours..."},
     //  {role: "user", name:"umcTokens", content: "Prêt pour l'initialisation"},

@@ -16,5 +16,5 @@ const mainWindow = new BrowserWindow({
   });
 
   // Charge un fichier HTML
-mainWindow.loadFile(path.join(__dirname, 'index.html'));
+mainWindow.loadFile(path.join(__dirname, 'pipeline.html'));
 });

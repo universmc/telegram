@@ -3,7 +3,7 @@ const { Telegraf } = require('telegraf');
 const axios = require('axios');
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-  const bot = new Telegraf('7308748601:AAEZpNh4G2Bdoc3CzT415BylFN5KhQgKQb4', {
+  const bot = new Telegraf('7428244681:AAGoh7TBdxKjPjLd7QQtPV0hLEDyynBeVio', {
       telegram: {
         webhookReply: true,
       },
@@ -321,6 +321,6 @@ Notre équipe travaille sans cesse à la mise à jour de notre plateforme de tra
   
   module.exports = { chatCompletion };
   
-  console.log(`✨Server Telegram running 🕴 .Blog_Pibot.✨`);
+  console.log(`✨Server Telegram running 🕴 .Ressource.✨`);
   bot.launch();
   

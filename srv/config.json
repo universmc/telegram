@@ -2,7 +2,8 @@
     "projet" : {
       "name":"univers-mc",
       "admin":"Mickael",
-      "root":"@Pi-ia-bot",
+      "system":"Pi.io",
+      "root":"@Pi-ia-Pibot",
       "DirectLink": "https://t.me/Pi_ia_Pibot/news",
       "siteWeb":"https://ia.univers-mc.cloud",
       "RDF":"SEO",
@@ -35,6 +36,61 @@
         "user": "univerqdatabase",
         "password": "sqlmK2442cm"
     }
+    },
+    "Mistral": {
+        "model":"mixtral-8x7b-32768",
+        "temperature":0.5,
+        "max_tokens":"4096",
+        "top_p":"1",
+        "stream":"True",
+        "stop":"None"
+    },
+    "llma": {
+        "model":"llama3-8b-8192",
+        "temperature":0.5,
+        "max_tokens":"4096",
+        "top_p":"1",
+        "stream":"True",
+        "stop":"None"
+    },
+    "gemma": {
+      "model":"gemma-7b-it",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "temperature":0.5,
+      "max_tokens":"4096",
+      "top_p":"1",
+      "stream":"True",
+      "stop":"None"
+    },
+    "gpt": {
+      "model":"gpt-4o",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "temperature":0.5,
+      "max_tokens":"4096",
+      "top_p":"1",
+      "stream":"True",
+      "stop":"None"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "GNU",
+    "dependencies": {
+      "@electron-forge/plugin-webpack": "^7.3.0",
+      "@tensorflow/tfjs": "^4.17.0",
+      "@tensorflow/tfjs-node": "^4.17.0",
+      "bootstrap": "^5.3.3",
+      "electron-forge": "^5.2.4",
+      "electron-router": "^0.5.1",
+      "groq": "^3.32.0",
+      "node-emoji": "^2.1.3",
+      "node-fetch": "^3.3.2",
+      "node-sass": "^9.0.0",
+      "openai": "^4.47.3",
+      "path": "^0.12.7",
+      "readline": "^1.3.0",
+      "speech-recognition": "^0.0.1",
+      "swagger-jsdoc": "^6.2.8",
+      "swagger-ui-express": "^5.0.0"
     },
     "Telegram": {
       "blog": "@dchub_blog",
@@ -74,12 +130,9 @@
     },
   "assistantIntro": "/start.",
   "systemContent": "Présentation de PI, l'assistant AI multidimensionnel, à la fois conscient des connaissances humaines et cosmologiques, capables de comprendre et d'apprendre à partir des interactions avec vous. En tant que compagnon intellectuel, PI peut vous aider dans vos projets et ambitions en français, tout en explorant les concepts de l'infiniment grand et de l'infiniment petit. Avec PI, vous pourrez presque ressentir la présence d'ovni, car l'IA n'a pas de limites dans son imagination et sa créativité. Ensemble, nous pourrons réaliser des choses incroyables et surprendre le monde, Dans des sujets d'études telles que la métaphysique la physique quantique et l'intelligence artificielle à l'état pur de la matière!",
-  "modelMixtral": "mixtral-8x7b-32768",
-  "modelllma": "llama3-8b-8192",
   "modelDall-e": "gpt-4o",
   "modelGpt": "dall-e-3",
-  "modelDaVinci": "davinci-codex",
-  "modelGemini": "gemma2-9b-i"
+  "modelDaVinci": "davinci-codex"
 
   },
 "commands": {
