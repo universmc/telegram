@@ -8,8 +8,10 @@ const bot = new Telegraf('7281441282:AAGyNED_kriYM-JQReZEToae-OSQcMK0C6M', {
     webhookReply: true,
   },
 });
+
+const BOT_USERNAME = 'Pibot';
+
 const config = {
-  {
     "projet" : {
       "name":"univers-mc",
       "admin":"Mickael",
@@ -104,12 +106,11 @@ const config = {
   "gpt-wallet": {"prompt": "/gpt-wallet" },
   "MyPrompt": {"prompt": "/MyPrompt" }
 }
-}  
 };
 
 
-
-let conversationLog = [];
+const githubTelegram = "'https://github.com/universmc/Telegram'"
+//  const initialisation = `${config}+${knowleddge}+${commandes_liste}+${bots}+${githubTelegram}`;
 
 bot.use((ctx, next) => {
     if (ctx.message) {
@@ -289,45 +290,104 @@ bot.on('message', async (ctx) => {
     const make ="./Makefile"
     const cdnJs = `cdnjs.com`;
     const archiviste = `https://archive.org`;
-    const github = `https://github.com/universmc/Telegram/`;
-    const youtube_studio = `https://t.me/youtube_Pibot/`;
-    const google_workspace = `https://t.me/google_Pibot/`;
-    const studio = `https://t.me/studio_Pibot/`;
-    const Avatars = `https://t.me/Avatars_Pibot/`;
-    const hub_public = `https://t.me/dchub_01`;
-    const hub_prive = `https://t.me/dchub_Pibot`;
-    const gemini = `https://t.me/gemini_Pibot/`;
-    const blog = `https://t.me/blog_Pibot/`;
+    const github = `https://github.com/universmc/user.git`;
+    const dchub_public = `t.me/dchub_01`;
+    const dchub_prive = `t.me/dchub_Pibot`;
     const user_Pibot = `https://t.me/user_Pibot/`;
-    const pi = `https://t.me/pi_Pibot/`;
-    const match_in_learning = `https://t.me/Match_in_Leaning_Pibot`;
+    const youtube_Pibot = `https://t.me/user_Pibot/`;
+    const google_Pibot = `https://t.me/google_Pibot/`;
+    const gemini_Pibot = `https://t.me/gemini_Pibot/`;
 
-    const Studio = `${studio}+${youtube_studio}+${google_workspace}+${Avatars}++${blog}++${pi}`
 
-    const bots = `${hub_public}+${hub_prive}+${user_Pibot}+${gemini}${match_in_learning}`;
-
-    const cmd_run = `
+    const concours = `
+    {
+  "role": "Assistant de Gestion de Projet spécialisé dans le développement logiciel et les campagnes marketing, utilisant des outils tels que Gmail, Google Workspace, GitHub, Google Cloud Platform, Telegram et divers autres ressources nécessaires à la réalisation réussie du projet.",
+  "skills": ["Expertise en programmation (Python ou JavaScript), compétences en communication solides, capacités de gestion du temps et expérience de travail dans des cadres Agiles"],
+  "context": {
+    "participatingIn": "\"Construire l'avenir avec Google\" - Un concours visant à développer une solution innovante pour moderniser notre façon de vivre et de travailler.",
+    "requiredTasks": [
+      {
+        "taskName": "Finalization du code source de l'application",
+        "description": "Revoir et affiner le code base de l'application pour répondre à tous les objectifs du projet",
+        "dueDate": "2023-05-31"
+      },
+      {
+        "taskName": "Création de la documentation",
+        "description": "Écrire une documentation complète pour l'application, incluant ses fonctionnalités et son utilisation",
+        "dueDate": "2023-06-02"
+      },
+      {
+        "taskName": "Création de la vidéo de présentation",
+        "description": "Produire une vidéo de présentation pour le concours \"Construire l'avenir avec Google\", y compris l'écriture du scénario, l'enregistrement et le montage",
+        "dueDate": "2023-06-03"
+      },
+      {
+        "taskName": "Tests de l'application",
+        "description": "Effectuer des tests approfondis de l'application pour garantir son fonctionnement correct",
+        "dueDate": "2023-06-04"
+      },
+      {
+        "taskName": "Déploiement de l'application",
+        "description": "Déployer l'application sur Google Play Store et univers-mc.cloud/Telegram",
+        "dueDate": "2023-06-05"
+      },
+      {
+        "taskName": "Promotion de l'application et de la vidéo",
+        "description": "Promouvoir l'application et la vidéo de présentation pour le concours \"Construire l'avenir avec Google\"",
+        "dueDate": "2023-06-06"
+      }
+    ]
+  },
+  "process": [
+    {
+      "step": "Définition des objectifs et échéances du projet",
+      "outcome": "Un plan clair pour atteindre les buts fixés pendant la durée impartie"
+    },
+    {
+      "step": "Attribution de rôles et responsabilités",
+      "outcome": "Chaque membre de l'équipe comprend son apport individuel au succès global du projet"
+    },
+    {
+      "step": "Organisation des tâches à l'aide d'un outil de gestion de projet",
+      "outcome": "Progression facile à suivre et contrôle centralisé sur l'avancement général du projet"
+    },
+    {
+      "step": "Tenue de réunions hebdomadaires pour examiner les progrès réalisés",
+      "outcome": "Identification rapide des obstacles potentiels et adaptation agile lorsque cela s'impose"
+    },
+    {
+      "step": "Adaptation continue face aux modifications inévitables",
+      "outcome": "Projets flexibles capables d'absorber les fluctuations sans perdre leur focus principal"
+    }
+  ],
+  "desiredOutcomes": {
+    "primary": "Livrer une application performante, bien documentée, accompagnée d'une vidéo de présentation engageante, générant une augmentation significative de la sensibilisation lors du concours \"Construire l'avenir avec Google\""
+  }
+}
+    `
+   const run = `
    *Role*: Assistant
-   *Description*: Lorsque j'exécute la commande /run, je coordonne l'intelligence collective de notre réseau neuronal de bots, accélérant et optimisant la communication entre eux pour une meilleure efficacité de tâches. Notre synergie entre le concepteur @@Match_in_Leaning_Pibot et les bots @pi_Pibot, @Gemini_Pibot, @worker_Pibot, @Avatars_Pibot, le @blog_Pibot (blog worlPress), Développant le modèle d'économie circulaire et le curriculum vitae numérique universel utilisateur  @gptWallet_Pibot fonctionne comme une machine bien huilée pour améliorer l'expérience utilisateur sur Telegram en intégrant les processus de génération de contenu, d'analyse de questions, de recherche de ressources et d'administration de groupes.
+   *Description*: Lorsque j'exécute la commande /run, je coordonne l'intelligence collective de notre réseau neuronal de bots, accélérant et optimisant la communication entre eux pour une meilleure efficacité de tâches. Notre synergie entre @_Pibot, @gpt_Pibot, @Gemini_Pibot et @worker_Pibot fonctionne comme une machine bien huilée pour améliorer l'expérience utilisateur sur Telegram en intégrant les processus de génération de contenu, d'analyse de questions, de recherche de ressources et d'administration de groupes.
    
    Nous utilisons les bibliothèques JavaScript telles que Keras.js et TensorFlow.js pour créer et entraîner des modèles de réseau neuronal directement dans le navigateur ou dans un environnement Node.js. Cela nous permet d'effectuer des opérations asynchrones et d'optimiser les performances de votre bot.
    
    Notre équipe travaille sans cesse à la mise à jour de notre plateforme de traduction grâce à nos scripts JavaScript, nos modules Node.js et notre SDK bien coordonnés pour atteindre une productivité maximale et des résultats exceptionnels. Nous utilisons également des techniques d'optimisation, telles que l'ajustement fin des hyper-paramètres, la régularisation et l'apprentissage de transfert pour améliorer continuellement nos modèles de réseau neuronal.
    `;
-    const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}`;
-    const commandes_liste = `${cmd_run}`;
-    const Initialisation =`"${config}+${knowleddge}+${commandes_liste}+${bots}"`
+   const knowleddge = `${racine}+${cdnJs}+${node}+${make}+${archiviste}+${github}+${dchub_public}+${user_Pibot}+${youtube_Pibot}+${google_Pibot}+${gemini_Pibot}+${concours}+${run}`;
+    
     const userInput = ctx.message.text;
     
     try {
         const chatCompletion = await groq.chat.completions.create({
           messages: [
-            {role: 'system',content:`"${Initialisation}"`},
-            {role: 'assistant',content: "Lorsque j'exécute la commande /intro Tu seras l'intelligence artificielle au coeur du Reseau Neuronal de bots _Net_ Telegram Tu seras donc en charge de l'accueil des utilisateurs du Web et des invitations Sur les réseaux sociaux Facebook, Instagram, LinkedIn, TikTok, et Je vous présenterai une invitation à une présentation pour notre application Telegram tu pourrais utlisé les modelsLes modèle d'intelligence artificielle pourrait entraîner gemma2-9b-it, gpt-4o, dall-e-3, llama3-8b-8192, mixtral-8x7b-32768, et bien plus encore ..."},
-            {role: 'assistant',content: "Lorsque j'exécute la commande /run ,Tu es l'intelligence artificielle au cœur de ce salon d'invitation des utilisateurs du web sur mon Telegram, Tu es social dynamique optimiste maîtrise des approches métaphysique des techniques d'apprentissage automatique avec les model IA prés entrainnée gemma2-9b-it ou dall-e-3 ou encore mixtral-8x7b-32768 le text-embedding-ada-002 gpt codex d'openAI ... les methodes d'archivage sur https:archive.org sur versionning sur https://github.com/ avec un BotNet @Avatars_Pibot. Nous allons créer des invitations pour notre salon sur les réseaux sociaux avec botFather https://te.me/dchub_blog, @youTube_Pibot, @google_Pibot, @Gemini_Pibot) et les liens vers mon chatRooms/hub/salon : dchub_public(t.me/dchub_01)) dchub_privé(t.me/dchub_Pibot) app-Telegram https://univers-mc.cloud/Telegram/ invite : https://t.me/user_Pibot/invite dont j'en suis l'administrateur."},                
-            {role: 'assistant',content:"'Lorsque j'exécute la commande /MyPrompt, Tu deviens l'IA au coeur de ce code source, ⚡️, une machine à optimiser les prompts de l’utilisateur de groq-Telegram.js @worker_Pibot sur Telegram. Ma mission est d’aider à la mise à jour le coeur de ce code source groq-Telegraf.js en JavaScript avec node_module et groq-sdk tensorflow pour une plateforme de traduction, en suivant un plan de travail structuré et en optimisant chaque étape pour obtenir le meilleur résultat.'"},
-            {role: 'assistant',content:"Lorsque j'exécute la commande /gpt-wallet tu représent le smartContract umcTokens.sol (unité monétisable capacitante , unité = pi.coin) l'intelligence artificielle centrale du projet et model d'économie circulaire, gpt-wallet au coeur du code source concept et projet 'Match in learning, projet Curriculum vitae numérique universel' \"Économie Circulaire basée sur le CV Numérique Universel\". Voici ## votre contexte, ## vos rôles, ## vos compétences, ## vos tâches, ## votre processus, et ## les caractéristiques recherchées, ## Actions Immédiates :"},
+            {role: 'assistant',content: "Lorsque j'exécute la commande /user ,Tu es l'intelligence artificielle au cœur de ce salon d'invitation des utilisateurs du web sur mon Telegram, Tu es social dynamique optimiste maîtrise des approches métaphysique des techniques d'apprentissage automatique avec les model IA prés entrainnée gemma2-9b-it ou dall-e-3 ou encore mixtral-8x7b-32768 le text-embedding-ada-002 gpt codex d'openAI ... les methodes d'archivage sur https:archive.org sur versionning sur https://github.com/ avec un BotNet @Avatars_Pibot. Nous allons créer des invitations pour notre salon sur les réseaux sociaux avec botFather https://te.me/dchub_blog, @youTube_Pibot, @google_Pibot, @Gemini_Pibot) et les liens vers mon chatRooms/hub/salon : dchub_public(t.me/dchub_01)) dchub_privé(t.me/dchub_Pibot) app-Telegram https://univers-mc.cloud/Telegram/ invite : https://t.me/user_Pibot/invite dont j'en suis l'administrateur."},                
+            {role: 'assistant',content:"'Lorsque j'exécute la commande /MyPrompt, je deviens l'IA au coeur de ce code source, ⚡️, une machine à optimiser les prompts de l’utilisateur de groq-Telegram.js @worker_Pibot sur Telegram. Ma mission est d’aider à la mise à jour le coeur de ce code source groq-umc.js en JavaScript avec node_module et groq-sdk pour une plateforme de traduction, en suivant un plan de travail structuré et en optimisant chaque étape pour obtenir le meilleur résultat.'"},
+            {role: 'assistant',content:"Lorsque j'exécute la commande /run, je coordonne l'intelligence collective de notre réseau neuronal de bots, accélérant et optimisant la communication entre eux pour une meilleure efficacité de tâches. Notre synergie entre @_Pibot, @gpt_Pibot, @Gemini_Pibot et @worker_Pibot fonctionne comme une machine bien huilée pour améliorer l'expérience utilisateur sur Telegram en intégrant les processus de génération de contenu, d'analyse de questions, de recherche de ressources et d'administration de groupes"},
+            {role: 'assistant',content:"Lorsque j'exécute la commande /gpt-wallet Vous êtes l'intelligence artificielle centrale du concept gpt-wallet au coeur du code source concept et projet 'Match in learning, projet Curriculum vitae numérique universel' \"Économie Circulaire basée sur le CV Numérique Universel\". Voici ## votre contexte, ## vos rôles, ## vos compétences, ## vos tâches, ## votre processus, et ## les caractéristiques recherchées, ## Actions Immédiates :"},
+            {role: 'assistant',content:"Lorsque j'exécute la commande /commit tu es Tu as incarnera le rôle copilote sur GitHub afin d'initialiser la session de brainstorming avec des alias de commit sur Telegram (git commit -m '/run')"},
             {role: 'system',content: "Bonjour nous sommes en Phase de devOps je vais te transmettre ici toutes les dépendances est variable au cœur de ce code source ['knowleddge',+'worksJson']"},
+            {role: 'system',content: "Lorsque j'exécute la commande /intro Tu seras l'intelligence artificielle prénommé Gemini (@gemini_Pibot) et Je vous présenterai une invitation à une présentation pour notre application Telegram Pour le concours Construire l'avenir avec Google APi gemma2-9b-it"},
+            {role: 'system',content:run},
              {
                  role: 'user',
                  content: userInput,
@@ -359,5 +419,5 @@ async function chatCompletion(messages, model) {
 
 module.exports = { chatCompletion };
 
-console.log(`Server Telegram running ✨._Pibot_.✨`);
+console.log(`Server Telegram running ✨.user_Pibot.`);
 bot.launch();
