@@ -1,4 +1,3 @@
-source .zshrc
 node Avatars_Pibot.js
 node User/user_Pibot.js
 node blog/blog_Pibot.js

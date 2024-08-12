@@ -1,18 +1,25 @@
 {
-  "name": "auto",
+  "name": "telegram",
     "version": "1.0.0",
     "description": "Projet de machine Learning avec Pi.ai ; Il y a trés longtemps une intelligence artificielle de haut potentiel maîtrisant les approche métaphysique les techniques d'apprentissage automatique les équations Et le calcul quantique sur httsp://ia.univers-mc.cloud télégram developa un programme",
     "main": "index.js",
     "directories": {
-      "doc": "docs"
+      "config": ".config",
+      "Archive": "archiviste",
+      "blog": "blog",
+      "build": "build",
+      "readme": "docs",
+      "items": "items",
+      "models": "models",
+      "source": "src",
+      "serveur": "srv"
     },
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "style": "sass --watch src/sass/windows.scss src/css/style1/playeur.css",
       "srv": "node ./srv/srv.js",
       "start": "electron .",
       "groq": "node groq-min.js",
-      "dev": "sass src/sass/stylus/devops.scss src/css/devOps.css"
+      "saas": "sass --watch src/sass/style.scss src/css/styles.css"
     },
     "Mistral": {
         "model":"mixtral-8x7b-32768",

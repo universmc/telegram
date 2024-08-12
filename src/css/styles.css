@@ -1,0 +1,159 @@
+/* style.css */
+html, body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #504b4b55;
+  color: #333;
+}
+
+h2, h3 {
+  margin: 0 0 10px 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ----- HEADER  --------------- */
+header {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vh;
+  min-height: 11vh;
+  background-color: #090012;
+  color: white;
+  text-align: center;
+}
+
+.cms {
+  display: flex;
+  flex-direction: row;
+  background-color: #090012;
+  height: 6px;
+  width: 80%;
+}
+
+.t-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* aside-left  */
+.aside-left {
+  display: flex;
+  width: 10%;
+  flex-direction: column;
+  justify-content: left;
+  background-color: #090012;
+}
+
+.row1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 93vh;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  min-width: 80vh;
+  min-height: 90vh;
+}
+
+.aside-center {
+  width: 80%;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.mainContenair {
+  display: flex;
+  flex-direction: row;
+}
+
+#sommaire {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  gap: 20px;
+  background-color: #eee;
+  padding: 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.picker {
+  background-color: #090012;
+  border: none;
+}
+
+.modal-sheet .modal-dialog {
+  width: 380px;
+  transition: bottom 0.75s ease-in-out;
+}
+
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+}
+
+#contenuCours {
+  width: 90%;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.markdown-contenu {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-contenu h1, .markdown-contenu h2, .markdown-contenu h3 {
+  color: #333;
+}
+
+.markdown-contenu p {
+  color: #666;
+}
+
+.aside-right {
+  display: flex;
+  width: 10%;
+  flex-direction: column;
+  justify-content: left;
+  background-color: #090012;
+}
+
+/* Ajoutez plus de styles ici selon vos besoins */
+footer {
+  display: flex;
+  min-height: 9vh;
+  width: 100%;
+  justify-content: end;
+  background-color: #090012;
+  color: white;
+  text-align: center;
+  bottom: 0;
+}
+
+
+
+/*# sourceMappingURL=styles.css.map */
