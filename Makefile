@@ -50,6 +50,11 @@ update:
 	@git push
 	@echo "✨ Mise à jour terminée✨"
 
+brainstroming:
+	@echo "✨ initialisation de la session de brainstroming ✨"
+	@git add .
+	@git commit -m "✨ /run de la session de brainstroming ✨"
+	
 init: gantt phase1 phase2 phase3 phase4 phase5 phase6 phase7 phase8
 # Magic COMPILER groq quantum
 gantt:

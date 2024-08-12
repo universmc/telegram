@@ -9,6 +9,8 @@ const bot = new Telegraf('6387827879:AAGcbZPnPhXOUzvEUwFmHNdiyGuPTbfeRGU', {
     },
   });
 
+  const BOT_USERNAME = 'Avatar';
+
 let conversationLog = [];
 
 bot.use((ctx, next) => {
@@ -57,7 +59,7 @@ bot.command('conversation_log', (ctx) => {
 bot.command('test', (ctx) => ctx.reply('echo test'))
 
 
-const BOT_USERNAME = 'Avatars';
+
 
 const commands = [
   {

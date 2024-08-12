@@ -1,5 +1,7 @@
 const { Telegraf } = require('telegraf');
 const Groq = require('groq-sdk');
+const nodeJs = require("./package.json");
+const config = require("./groq-config.json");
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 
